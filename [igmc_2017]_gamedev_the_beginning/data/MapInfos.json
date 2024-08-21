@@ -1,0 +1,11 @@
+[
+null,
+{"id":1,"expanded":false,"name":"SecondFloor","order":2,"parentId":0,"scrollX":790.8,"scrollY":480.59999999999997},
+{"id":2,"expanded":false,"name":"TEST_MAP","order":8,"parentId":0,"scrollX":1116.4444444444443,"scrollY":892.8888888888889},
+{"id":3,"expanded":false,"name":"JoesRoom","order":1,"parentId":0,"scrollX":790.8,"scrollY":480.59999999999997},
+{"id":4,"expanded":false,"name":"FirstFloor","order":3,"parentId":0,"scrollX":585.7777777777778,"scrollY":356},
+{"id":5,"expanded":false,"name":"Sewers","order":4,"parentId":0,"scrollX":781.1999999999999,"scrollY":2067},
+{"id":6,"expanded":false,"name":"ForestEntry","order":5,"parentId":0,"scrollX":781.1999999999999,"scrollY":969},
+{"id":7,"expanded":false,"name":"EasternForest","order":6,"parentId":0,"scrollX":1404,"scrollY":1860.6},
+{"id":8,"expanded":false,"name":"ForestBoss","order":7,"parentId":0,"scrollX":781.1999999999999,"scrollY":471}
+]
