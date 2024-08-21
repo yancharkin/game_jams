@@ -63,7 +63,7 @@ self.addEventListener("fetch", (event) => {
     );
 });
 
-export const filesList = [
+const filesList = [
     "game_jams/[igmc_2017]_gamedev_the_beginning/",
     "game_jams/[igmc_2017]_gamedev_the_beginning/audio/bgm/Battle.m4a",
     "game_jams/[igmc_2017]_gamedev_the_beginning/audio/bgm/Battle.ogg",
