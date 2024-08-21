@@ -1,0 +1,12 @@
+{
+    "name": "GameDev: The Beginning",
+    "main": "index.html",
+    "js-flags": "--expose-gc",
+    "window": {
+        "title": "",
+        "toolbar": false,
+        "width": 816,
+        "height": 460,
+        "icon": "icon/icon.png"
+    }
+}

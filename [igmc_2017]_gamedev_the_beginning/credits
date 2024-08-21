@@ -2,32 +2,42 @@
 #                                  Plugins                                     #
 ################################################################################
 
-    Community_Basic by RM CoreScripts team
-    CXJ_Exit by G.A.M Kertopermono
-    GALV_CuasomTitle
-    GALV_DisableDash
+    ALOE_VirtualButtons
+    Community_Basic
+    CXJ_Exit
+    DestinationSprite (Krimer)
+    FullscreenOptions (Krimer)
+    GALV_CustomTitle
+    GALV_DiagonalMovement
     GALV_MessageStyles
-    MrTS_Battler_BattleUI by Mr. Trivel
-    MrTS_NoItemCategories by Mr. Trivel
-    MOG_EnemyHP by Moghunter
-    No Autoshadow by Archeia
-    SRD_AudioFader by SumRndmDde
-    SRD_FullscreenToggleOption by SumRndmDde
-    SRD_MenuStatusCustomizer by SumRndmDde
-    SRD_NameInputUpgrade by SumRndmDde
-    TYR_FollowerControl by Tyruswoo
+    GALV_VisualNovelChoices
+    MOG_ActorTurnIndicator
+    MOG_Weather_EX
+    MrTS_NoItemCategories
+    No Autoshadow
+    SRD_ActorSelect
+    SRD_AudioFader
+    SRD_BattleStatusCustomizer
+    SRD_GameOverCore
+    TYR_FollowerControl
     VE_BasicModule
     VE_SFont
+    YEP_BattleEngineCore
+    YEP_EquipCore
     YEP_FpsSynchOption
     YEP_MainMenuManager
-    YEP_MessageCore by Yanfly
+    YEP_MessageCore
+    YEP_PictureCommonEvents
+    YEP_RegionRestrictions
+    YEP_X_VisualHpGauge
+    YSP_Preloader
 
 ################################################################################
 #                                  Font                                      #
 ################################################################################
 
     Manaspace by codeman38
-    
+
 ################################################################################
 #                                  Sounds                                      #
 ################################################################################
@@ -39,3 +49,6 @@
     253684__xdimebagx__monster-step-backleg-1-2.wav by xDimebagx@freesound.org
     253683__xdimebagx__monster-step-backleg-2-2.wav by xDimebagx@freesound.org
     120357__cemagar__wall-ball.wav by cemagar
+    398750__anthousai__door-open-01.wav Anthousai by @freesound.org
+    198962__mydo1__footsteps-on-wood.wav by Mydo1@freesound.org
+

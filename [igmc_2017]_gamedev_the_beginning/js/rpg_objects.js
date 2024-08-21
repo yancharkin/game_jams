@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_objects.js v1.5.1
+// rpg_objects.js v1.6.2
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -9340,11 +9340,19 @@ Game_Interpreter.prototype.command413 = function() {
 
 // Break Loop
 Game_Interpreter.prototype.command113 = function() {
+    var depth = 0;
     while (this._index < this._list.length - 1) {
         this._index++;
         var command = this.currentCommand();
-        if (command.code === 413 && command.indent < this._indent) {
-            break;
+
+        if (command.code === 112)
+            depth++;
+
+        if (command.code === 413) {
+            if (depth > 0)
+                depth--;
+            else
+                break;
         }
     }
     return true;

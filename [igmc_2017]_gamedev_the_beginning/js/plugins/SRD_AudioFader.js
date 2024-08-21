@@ -17,9 +17,13 @@
  * SumRndmDde
  *
  *
- * This plugin gives the developer more control over the volume fading of BGM, 
+ * This plugin gives the developer more control over the volume fading of BGM,
  * BGS, and ME audio effects within the game.
  *
+ * Edit by yancharkin:
+ * If prefix target with 'v' character the plugin will use variable with this nuber
+ * e.g, v12 => variable number 12 not number 12
+ * Info: https://forums.rpgmakerweb.com/index.php?threads/is-it-possible-to-specify-the-variable-number-in-the-plugin-command-that-requires-the-actor-id.166468/post-1427544
  *
  * ==============================================================================
  *  Plugin Commands
@@ -27,7 +31,7 @@
  *
  * In order to fade in audio, use the following Plugin Commands.
  * In all the Plugin Commands, the "type" needs to be defined. The "type" can be
- * one of the following: BGM, BGS, or ME. That plugin will then affect the 
+ * one of the following: BGM, BGS, or ME. That plugin will then affect the
  * current BGM, BGS, or ME respectively.
  *
  *
@@ -55,7 +59,7 @@
  * ==============================================================================
  *  End of Help File
  * ==============================================================================
- * 
+ *
  * Welcome to the bottom of the Help file.
  *
  *
@@ -130,7 +134,10 @@ $['fadeout'] = function(args) {
 $['fadeto'] = function(args) {
 	const type = String(args[0]).toLowerCase();
 	const frames = parseInt(args[1]) / 60;
-	const target = parseFloat(args[2] / 100).clamp(0, 1);
+	const target = args[2] && args[2].toLowerCase().startsWith('v')
+		? parseFloat($gameVariables.value(args[2].slice(1)) / 100).clamp(0, 1)
+		: parseFloat(args[2] / 100).clamp(0, 1);
+
 	switch(type) {
 		case 'bgm':
 			AudioManager.fadeToBgm(frames, target);
@@ -148,7 +155,10 @@ $['fadefromto'] = function(args) {
 	const type = String(args[0]).toLowerCase();
 	const frames = parseInt(args[1]) / 60;
 	const current = parseFloat(args[2] / 100).clamp(0, 1);
-	const target = parseFloat(args[3] / 100).clamp(0, 1);
+	const target = args[3] && args[3].toLowerCase().startsWith('v')
+		? parseFloat($gameVariables.value(args[3].slice(1)) / 100).clamp(0, 1)
+		: parseFloat(args[3] / 100).clamp(0, 1);
+
 	switch(type) {
 		case 'bgm':
 			AudioManager.fadeFromToBgm(frames, current, target);

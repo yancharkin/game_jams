@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_scenes.js v1.5.1
+// rpg_scenes.js v1.6.2
 //=============================================================================
 
 //=============================================================================
@@ -931,10 +931,10 @@ Scene_MenuBase.prototype.setBackgroundOpacity = function(opacity) {
     this._backgroundSprite.opacity = opacity;
 };
 
-//~ zScene_MenuBase.prototype.createHelpWindow = function() {
-    //~ this._helpWindow = new Window_Help();
-    //~ this.addWindow(this._helpWindow);
-//~ };
+Scene_MenuBase.prototype.createHelpWindow = function() {
+    this._helpWindow = new Window_Help();
+    this.addWindow(this._helpWindow);
+};
 
 Scene_MenuBase.prototype.nextActor = function() {
     $gameParty.makeMenuActorNext();
@@ -1229,7 +1229,7 @@ Scene_Item.prototype.initialize = function() {
 
 Scene_Item.prototype.create = function() {
     Scene_ItemBase.prototype.create.call(this);
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createCategoryWindow();
     this.createItemWindow();
     this.createActorWindow();
@@ -1237,8 +1237,8 @@ Scene_Item.prototype.create = function() {
 
 Scene_Item.prototype.createCategoryWindow = function() {
     this._categoryWindow = new Window_ItemCategory();
-    //~ this._categoryWindow.setHelpWindow(this._helpWindow);
-    //~ this._categoryWindow.y = this._helpWindow.height;
+    this._categoryWindow.setHelpWindow(this._helpWindow);
+    this._categoryWindow.y = this._helpWindow.height;
     this._categoryWindow.setHandler('ok',     this.onCategoryOk.bind(this));
     this._categoryWindow.setHandler('cancel', this.popScene.bind(this));
     this.addWindow(this._categoryWindow);
@@ -1248,7 +1248,7 @@ Scene_Item.prototype.createItemWindow = function() {
     var wy = this._categoryWindow.y + this._categoryWindow.height;
     var wh = Graphics.boxHeight - wy;
     this._itemWindow = new Window_ItemList(0, wy, Graphics.boxWidth, wh);
-    //~ this._itemWindow.setHelpWindow(this._helpWindow);
+    this._itemWindow.setHelpWindow(this._helpWindow);
     this._itemWindow.setHandler('ok',     this.onItemOk.bind(this));
     this._itemWindow.setHandler('cancel', this.onItemCancel.bind(this));
     this.addWindow(this._itemWindow);
@@ -1310,7 +1310,7 @@ Scene_Skill.prototype.initialize = function() {
 
 Scene_Skill.prototype.create = function() {
     Scene_ItemBase.prototype.create.call(this);
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createSkillTypeWindow();
     this.createStatusWindow();
     this.createItemWindow();
@@ -1323,10 +1323,9 @@ Scene_Skill.prototype.start = function() {
 };
 
 Scene_Skill.prototype.createSkillTypeWindow = function() {
-    //~ var wy = this._helpWindow.height;
-    wy = 0;
+    var wy = this._helpWindow.height;
     this._skillTypeWindow = new Window_SkillType(0, wy);
-    //~ this._skillTypeWindow.setHelpWindow(this._helpWindow);
+    this._skillTypeWindow.setHelpWindow(this._helpWindow);
     this._skillTypeWindow.setHandler('skill',    this.commandSkill.bind(this));
     this._skillTypeWindow.setHandler('cancel',   this.popScene.bind(this));
     this._skillTypeWindow.setHandler('pagedown', this.nextActor.bind(this));
@@ -1336,8 +1335,7 @@ Scene_Skill.prototype.createSkillTypeWindow = function() {
 
 Scene_Skill.prototype.createStatusWindow = function() {
     var wx = this._skillTypeWindow.width;
-    //~ var wy = this._helpWindow.height;
-    var wy = 0;
+    var wy = this._helpWindow.height;
     var ww = Graphics.boxWidth - wx;
     var wh = this._skillTypeWindow.height;
     this._statusWindow = new Window_SkillStatus(wx, wy, ww, wh);
@@ -1351,7 +1349,7 @@ Scene_Skill.prototype.createItemWindow = function() {
     var ww = Graphics.boxWidth;
     var wh = Graphics.boxHeight - wy;
     this._itemWindow = new Window_SkillList(wx, wy, ww, wh);
-    //~ this._itemWindow.setHelpWindow(this._helpWindow);
+    this._itemWindow.setHelpWindow(this._helpWindow);
     this._itemWindow.setHandler('ok',     this.onItemOk.bind(this));
     this._itemWindow.setHandler('cancel', this.onItemCancel.bind(this));
     this._skillTypeWindow.setSkillWindow(this._itemWindow);
@@ -1417,7 +1415,7 @@ Scene_Equip.prototype.initialize = function() {
 
 Scene_Equip.prototype.create = function() {
     Scene_MenuBase.prototype.create.call(this);
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createStatusWindow();
     this.createCommandWindow();
     this.createSlotWindow();
@@ -1426,18 +1424,16 @@ Scene_Equip.prototype.create = function() {
 };
 
 Scene_Equip.prototype.createStatusWindow = function() {
-    //~ this._statusWindow = new Window_EquipStatus(0, this._helpWindow.height);
-    this._statusWindow = new Window_EquipStatus(0, 0);
+    this._statusWindow = new Window_EquipStatus(0, this._helpWindow.height);
     this.addWindow(this._statusWindow);
 };
 
 Scene_Equip.prototype.createCommandWindow = function() {
     var wx = this._statusWindow.width;
-    //~ var wy = this._helpWindow.height;
-    var wy = 0;
+    var wy = this._helpWindow.height;
     var ww = Graphics.boxWidth - this._statusWindow.width;
     this._commandWindow = new Window_EquipCommand(wx, wy, ww);
-    //~ this._commandWindow.setHelpWindow(this._helpWindow);
+    this._commandWindow.setHelpWindow(this._helpWindow);
     this._commandWindow.setHandler('equip',    this.commandEquip.bind(this));
     this._commandWindow.setHandler('optimize', this.commandOptimize.bind(this));
     this._commandWindow.setHandler('clear',    this.commandClear.bind(this));
@@ -1453,7 +1449,7 @@ Scene_Equip.prototype.createSlotWindow = function() {
     var ww = Graphics.boxWidth - this._statusWindow.width;
     var wh = this._statusWindow.height - this._commandWindow.height;
     this._slotWindow = new Window_EquipSlot(wx, wy, ww, wh);
-    //~ this._slotWindow.setHelpWindow(this._helpWindow);
+    this._slotWindow.setHelpWindow(this._helpWindow);
     this._slotWindow.setStatusWindow(this._statusWindow);
     this._slotWindow.setHandler('ok',       this.onSlotOk.bind(this));
     this._slotWindow.setHandler('cancel',   this.onSlotCancel.bind(this));
@@ -1466,7 +1462,7 @@ Scene_Equip.prototype.createItemWindow = function() {
     var ww = Graphics.boxWidth;
     var wh = Graphics.boxHeight - wy;
     this._itemWindow = new Window_EquipItem(wx, wy, ww, wh);
-    //~ this._itemWindow.setHelpWindow(this._helpWindow);
+    this._itemWindow.setHelpWindow(this._helpWindow);
     this._itemWindow.setStatusWindow(this._statusWindow);
     this._itemWindow.setHandler('ok',     this.onItemOk.bind(this));
     this._itemWindow.setHandler('cancel', this.onItemCancel.bind(this));
@@ -1624,7 +1620,7 @@ Scene_File.prototype.initialize = function() {
 Scene_File.prototype.create = function() {
     Scene_MenuBase.prototype.create.call(this);
     DataManager.loadAllSavefileImages();
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createListWindow();
 };
 
@@ -1645,8 +1641,7 @@ Scene_File.prototype.createHelpWindow = function() {
 
 Scene_File.prototype.createListWindow = function() {
     var x = 0;
-    //~ var y = this._helpWindow.height;
-    var y = 0;
+    var y = this._helpWindow.height;
     var width = Graphics.boxWidth;
     var height = Graphics.boxHeight - y;
     this._listWindow = new Window_SavefileList(x, y, width, height);
@@ -1859,7 +1854,7 @@ Scene_Shop.prototype.prepare = function(goods, purchaseOnly) {
 
 Scene_Shop.prototype.create = function() {
     Scene_MenuBase.prototype.create.call(this);
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createGoldWindow();
     this.createCommandWindow();
     this.createDummyWindow();
@@ -1871,16 +1866,14 @@ Scene_Shop.prototype.create = function() {
 };
 
 Scene_Shop.prototype.createGoldWindow = function() {
-    //~ this._goldWindow = new Window_Gold(0, this._helpWindow.height);
-    this._goldWindow = new Window_Gold(0, 0);
+    this._goldWindow = new Window_Gold(0, this._helpWindow.height);
     this._goldWindow.x = Graphics.boxWidth - this._goldWindow.width;
     this.addWindow(this._goldWindow);
 };
 
 Scene_Shop.prototype.createCommandWindow = function() {
     this._commandWindow = new Window_ShopCommand(this._goldWindow.x, this._purchaseOnly);
-    //~ this._commandWindow.y = this._helpWindow.height;
-    this._commandWindow.y = 0;
+    this._commandWindow.y = this._helpWindow.height;
     this._commandWindow.setHandler('buy',    this.commandBuy.bind(this));
     this._commandWindow.setHandler('sell',   this.commandSell.bind(this));
     this._commandWindow.setHandler('cancel', this.popScene.bind(this));
@@ -1918,7 +1911,7 @@ Scene_Shop.prototype.createBuyWindow = function() {
     var wy = this._dummyWindow.y;
     var wh = this._dummyWindow.height;
     this._buyWindow = new Window_ShopBuy(0, wy, wh, this._goods);
-    //~ this._buyWindow.setHelpWindow(this._helpWindow);
+    this._buyWindow.setHelpWindow(this._helpWindow);
     this._buyWindow.setStatusWindow(this._statusWindow);
     this._buyWindow.hide();
     this._buyWindow.setHandler('ok',     this.onBuyOk.bind(this));
@@ -1928,7 +1921,7 @@ Scene_Shop.prototype.createBuyWindow = function() {
 
 Scene_Shop.prototype.createCategoryWindow = function() {
     this._categoryWindow = new Window_ItemCategory();
-    //~ this._categoryWindow.setHelpWindow(this._helpWindow);
+    this._categoryWindow.setHelpWindow(this._helpWindow);
     this._categoryWindow.y = this._dummyWindow.y;
     this._categoryWindow.hide();
     this._categoryWindow.deactivate();
@@ -1941,7 +1934,7 @@ Scene_Shop.prototype.createSellWindow = function() {
     var wy = this._categoryWindow.y + this._categoryWindow.height;
     var wh = Graphics.boxHeight - wy;
     this._sellWindow = new Window_ShopSell(0, wy, Graphics.boxWidth, wh);
-    //~ this._sellWindow.setHelpWindow(this._helpWindow);
+    this._sellWindow.setHelpWindow(this._helpWindow);
     this._sellWindow.hide();
     this._sellWindow.setHandler('ok',     this.onSellOk.bind(this));
     this._sellWindow.setHandler('cancel', this.onSellCancel.bind(this));
@@ -1993,7 +1986,7 @@ Scene_Shop.prototype.onBuyCancel = function() {
     this._buyWindow.hide();
     this._statusWindow.hide();
     this._statusWindow.setItem(null);
-    //~ this._helpWindow.clear();
+    this._helpWindow.clear();
 };
 
 Scene_Shop.prototype.onCategoryOk = function() {
@@ -2024,7 +2017,7 @@ Scene_Shop.prototype.onSellCancel = function() {
     this._sellWindow.deselect();
     this._categoryWindow.activate();
     this._statusWindow.setItem(null);
-    //~ this._helpWindow.clear();
+    this._helpWindow.clear();
 };
 
 Scene_Shop.prototype.onNumberOk = function() {
@@ -2168,7 +2161,7 @@ Scene_Debug.prototype.create = function() {
     Scene_MenuBase.prototype.create.call(this);
     this.createRangeWindow();
     this.createEditWindow();
-    //~ this.createDebugHelpWindow();
+    this.createDebugHelpWindow();
 };
 
 Scene_Debug.prototype.createRangeWindow = function() {
@@ -2192,20 +2185,20 @@ Scene_Debug.prototype.createDebugHelpWindow = function() {
     var wy = this._editWindow.height;
     var ww = this._editWindow.width;
     var wh = Graphics.boxHeight - wy;
-    //~ this._debugHelpWindow = new Window_Base(wx, wy, ww, wh);
-    //~ this.addWindow(this._debugHelpWindow);
+    this._debugHelpWindow = new Window_Base(wx, wy, ww, wh);
+    this.addWindow(this._debugHelpWindow);
 };
 
 Scene_Debug.prototype.onRangeOk = function() {
     this._editWindow.activate();
     this._editWindow.select(0);
-    //~ this.refreshHelpWindow();
+    this.refreshHelpWindow();
 };
 
 Scene_Debug.prototype.onEditCancel = function() {
     this._rangeWindow.activate();
     this._editWindow.deselect();
-    //~ this.refreshHelpWindow();
+    this.refreshHelpWindow();
 };
 
 Scene_Debug.prototype.refreshHelpWindow = function() {
@@ -2372,7 +2365,7 @@ Scene_Battle.prototype.createAllWindows = function() {
     this.createStatusWindow();
     this.createPartyCommandWindow();
     this.createActorCommandWindow();
-    //~ this.createHelpWindow();
+    this.createHelpWindow();
     this.createSkillWindow();
     this.createItemWindow();
     this.createActorWindow();
@@ -2416,22 +2409,20 @@ Scene_Battle.prototype.createHelpWindow = function() {
 };
 
 Scene_Battle.prototype.createSkillWindow = function() {
-    //~ var wy = this._helpWindow.y + this._helpWindow.height;
-    var wy = 0
+    var wy = this._helpWindow.y + this._helpWindow.height;
     var wh = this._statusWindow.y - wy;
     this._skillWindow = new Window_BattleSkill(0, wy, Graphics.boxWidth, wh);
-    //~ this._skillWindow.setHelpWindow(this._helpWindow);
+    this._skillWindow.setHelpWindow(this._helpWindow);
     this._skillWindow.setHandler('ok',     this.onSkillOk.bind(this));
     this._skillWindow.setHandler('cancel', this.onSkillCancel.bind(this));
     this.addWindow(this._skillWindow);
 };
 
 Scene_Battle.prototype.createItemWindow = function() {
-    //~ var wy = this._helpWindow.y + this._helpWindow.height;
-    var wy = 0
+    var wy = this._helpWindow.y + this._helpWindow.height;
     var wh = this._statusWindow.y - wy;
     this._itemWindow = new Window_BattleItem(0, wy, Graphics.boxWidth, wh);
-    //~ this._itemWindow.setHelpWindow(this._helpWindow);
+    this._itemWindow.setHelpWindow(this._helpWindow);
     this._itemWindow.setHandler('ok',     this.onItemOk.bind(this));
     this._itemWindow.setHandler('cancel', this.onItemCancel.bind(this));
     this.addWindow(this._itemWindow);

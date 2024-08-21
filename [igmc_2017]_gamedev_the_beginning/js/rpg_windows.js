@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_windows.js v1.5.1
+// rpg_windows.js v1.6.2
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -71,8 +71,7 @@ Window_Base.prototype.updatePadding = function() {
 };
 
 Window_Base.prototype.updateBackOpacity = function() {
-    //~ this.backOpacity = this.standardBackOpacity();
-    this.backOpacity = 255;
+    this.backOpacity = this.standardBackOpacity();
 };
 
 Window_Base.prototype.contentsWidth = function() {
@@ -583,25 +582,15 @@ Window_Base.prototype.drawActorTp = function(actor, x, y, width) {
 };
 
 Window_Base.prototype.drawActorSimpleStatus = function(actor, x, y, width) {
-    //~ var lineHeight = this.lineHeight();
-    //~ var x2 = x + 180;
-    //~ var width2 = Math.min(200, width - 180 - this.textPadding());
-    //~ this.drawActorName(actor, x, y);
-    //~ this.drawActorLevel(actor, x, y + lineHeight * 1);
-    //~ this.drawActorIcons(actor, x, y + lineHeight * 2);
-    //~ this.drawActorClass(actor, x2, y);
-    //~ this.drawActorHp(actor, x2, y + lineHeight * 1, width2);
-    //~ this.drawActorMp(actor, x2, y + lineHeight * 2, width2);
-    
     var lineHeight = this.lineHeight();
     var x2 = x + 180;
-    //~ var y2 = y + lineHeight * 0.5;
     var width2 = Math.min(200, width - 180 - this.textPadding());
     this.drawActorName(actor, x, y);
     this.drawActorLevel(actor, x, y + lineHeight * 1);
     this.drawActorIcons(actor, x, y + lineHeight * 2);
-    this.drawActorHp(actor, x2, y, width2);
-    this.drawActorMp(actor, x2, y + lineHeight * 1, width2);
+    this.drawActorClass(actor, x2, y);
+    this.drawActorHp(actor, x2, y + lineHeight * 1, width2);
+    this.drawActorMp(actor, x2, y + lineHeight * 2, width2);
 };
 
 Window_Base.prototype.drawItemName = function(item, x, y, width) {
@@ -1424,8 +1413,7 @@ Window_Command.prototype.drawItem = function(index) {
 };
 
 Window_Command.prototype.itemTextAlign = function() {
-    //~ return 'left';
-    return 'center';
+    return 'left';
 };
 
 Window_Command.prototype.isOkEnabled = function() {
@@ -1712,8 +1700,7 @@ Window_MenuStatus.prototype = Object.create(Window_Selectable.prototype);
 Window_MenuStatus.prototype.constructor = Window_MenuStatus;
 
 Window_MenuStatus.prototype.initialize = function(x, y) {
-    //~ var width = this.windowWidth();
-    var width = Graphics.boxWidth;
+    var width = this.windowWidth();
     var height = this.windowHeight();
     Window_Selectable.prototype.initialize.call(this, x, y, width, height);
     this._formationMode = false;
@@ -1722,8 +1709,7 @@ Window_MenuStatus.prototype.initialize = function(x, y) {
 };
 
 Window_MenuStatus.prototype.windowWidth = function() {
-    //~ return Graphics.boxWidth - 240;
-    return Graphics.boxWidth;
+    return Graphics.boxWidth - 240;
 };
 
 Window_MenuStatus.prototype.windowHeight = function() {
@@ -1908,7 +1894,6 @@ Window_ItemCategory.prototype.makeCommandList = function() {
 
 Window_ItemCategory.prototype.setItemWindow = function(itemWindow) {
     this._itemWindow = itemWindow;
-    this.update();
 };
 
 //-----------------------------------------------------------------------------
@@ -2084,7 +2069,6 @@ Window_SkillType.prototype.update = function() {
 
 Window_SkillType.prototype.setSkillWindow = function(skillWindow) {
     this._skillWindow = skillWindow;
-    this.update();
 };
 
 Window_SkillType.prototype.selectLast = function() {
@@ -2313,10 +2297,9 @@ Window_EquipStatus.prototype.setTempActor = function(tempActor) {
 Window_EquipStatus.prototype.drawItem = function(x, y, paramId) {
     this.drawParamName(x + this.textPadding(), y, paramId);
     if (this._actor) {
-        //~ this.drawCurrentParam(x + 140, y, paramId);
-        this.drawCurrentParam(x + 224, y, paramId);
+        this.drawCurrentParam(x + 140, y, paramId);
     }
-    this.drawRightArrow(x + 178, y);
+    this.drawRightArrow(x + 188, y);
     if (this._tempActor) {
         this.drawNewParam(x + 222, y, paramId);
     }
@@ -2421,8 +2404,7 @@ Window_EquipSlot.prototype.drawItem = function(index) {
         this.changeTextColor(this.systemColor());
         this.changePaintOpacity(this.isEnabled(index));
         this.drawText(this.slotName(index), rect.x, rect.y, 138, this.lineHeight());
-        //~ this.drawItemName(this._actor.equips()[index], rect.x + 138, rect.y);
-        this.drawItemName(this._actor.equips()[index], rect.x + 188, rect.y);
+        this.drawItemName(this._actor.equips()[index], rect.x + 138, rect.y);
         this.changePaintOpacity(true);
     }
 };
@@ -2447,7 +2429,6 @@ Window_EquipSlot.prototype.setStatusWindow = function(statusWindow) {
 
 Window_EquipSlot.prototype.setItemWindow = function(itemWindow) {
     this._itemWindow = itemWindow;
-    this.update();
 };
 
 Window_EquipSlot.prototype.updateHelp = function() {
@@ -2558,23 +2539,13 @@ Window_Status.prototype.refresh = function() {
     this.contents.clear();
     if (this._actor) {
         var lineHeight = this.lineHeight();
-        
-        // Default
-        //~ this.drawBlock1(lineHeight * 0);
-        //~ this.drawHorzLine(lineHeight * 1);
-        
-        this.drawBlock2(lineHeight * 0);
-        this.drawHorzLine(lineHeight * 4);
-        this.drawBlock3(lineHeight * 5);
-        //~ this.drawHorzLine(lineHeight * 13);
-        //~ this.drawBlock4(lineHeight * 14);
-        
-        // Default
-        //~ this.drawBlock2(lineHeight * 2);
-        //~ this.drawHorzLine(lineHeight * 6);
-        //~ this.drawBlock3(lineHeight * 7);
-        //~ this.drawHorzLine(lineHeight * 13);
-        //~ this.drawBlock4(lineHeight * 14);
+        this.drawBlock1(lineHeight * 0);
+        this.drawHorzLine(lineHeight * 1);
+        this.drawBlock2(lineHeight * 2);
+        this.drawHorzLine(lineHeight * 6);
+        this.drawBlock3(lineHeight * 7);
+        this.drawHorzLine(lineHeight * 13);
+        this.drawBlock4(lineHeight * 14);
     }
 };
 
@@ -2707,8 +2678,8 @@ Window_Options.prototype.addGeneralOptions = function() {
 Window_Options.prototype.addVolumeOptions = function() {
     this.addCommand(TextManager.bgmVolume, 'bgmVolume');
     this.addCommand(TextManager.bgsVolume, 'bgsVolume');
-    //~ this.addCommand(TextManager.meVolume, 'meVolume');
-    //~ this.addCommand(TextManager.seVolume, 'seVolume');
+    this.addCommand(TextManager.meVolume, 'meVolume');
+    this.addCommand(TextManager.seVolume, 'seVolume');
 };
 
 Window_Options.prototype.drawItem = function(index) {
@@ -5927,7 +5898,6 @@ Window_DebugRange.prototype.processCancel = function() {
 
 Window_DebugRange.prototype.setEditWindow = function(editWindow) {
     this._editWindow = editWindow;
-    this.update();
 };
 
 //-----------------------------------------------------------------------------

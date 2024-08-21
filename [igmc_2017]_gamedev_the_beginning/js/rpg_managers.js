@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_managers.js v1.5.1
+// rpg_managers.js v1.6.2
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -471,15 +471,9 @@ ConfigManager.commandRemember   = false;
 Object.defineProperty(ConfigManager, 'bgmVolume', {
     get: function() {
         return AudioManager._bgmVolume;
-        //
-        return AudioManager.meVolume;
-        //
     },
     set: function(value) {
         AudioManager.bgmVolume = value;
-        //
-        AudioManager.meVolume = value;
-        //
     },
     configurable: true
 });
@@ -487,15 +481,9 @@ Object.defineProperty(ConfigManager, 'bgmVolume', {
 Object.defineProperty(ConfigManager, 'bgsVolume', {
     get: function() {
         return AudioManager.bgsVolume;
-        //
-        return AudioManager.seVolume;
-        //
     },
     set: function(value) {
         AudioManager.bgsVolume = value;
-        //
-        AudioManager.seVolume = value;
-        //
     },
     configurable: true
 });
@@ -894,7 +882,7 @@ ImageManager.loadNormalBitmap = function(path, hue) {
     var key = this._generateCacheKey(path, hue);
     var bitmap = this._imageCache.get(key);
     if (!bitmap) {
-        bitmap = Bitmap.load(path);
+        bitmap = Bitmap.load(decodeURIComponent(path));
         bitmap.addLoadListener(function() {
             bitmap.rotateHue(hue);
         });
@@ -2286,7 +2274,7 @@ BattleManager.updateEvent = function() {
                 return this.updateEventMain();
             }
     }
-    return this.checkAbort2();
+    return this.checkAbort();
 };
 
 BattleManager.updateEventMain = function() {
@@ -2364,7 +2352,7 @@ BattleManager.startBattle = function() {
     $gameSystem.onBattleStart();
     $gameParty.onBattleStart();
     $gameTroop.onBattleStart();
-    //~ this.displayStartMessages();
+    this.displayStartMessages();
 };
 
 BattleManager.displayStartMessages = function() {
@@ -2634,14 +2622,6 @@ BattleManager.checkBattleEnd = function() {
 };
 
 BattleManager.checkAbort = function() {
-    if ($gameParty.isEmpty() || this.isAborting()) {
-        this.processAbort();
-        return true;
-    }
-    return false;
-};
-
-BattleManager.checkAbort2 = function() {
     if ($gameParty.isEmpty() || this.isAborting()) {
         SoundManager.playEscape();
         this._escaped = true;
