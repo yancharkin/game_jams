@@ -1,0 +1,12 @@
+[
+null,
+{"id":1,"expanded":false,"name":"SecondFloor","order":3,"parentId":0,"scrollX":631.6363636363636,"scrollY":402},
+null,
+{"id":3,"expanded":false,"name":"JoesRoom","order":2,"parentId":0,"scrollX":631.6363636363636,"scrollY":402},
+{"id":4,"expanded":false,"name":"FirstFloor","order":4,"parentId":0,"scrollX":631.6363636363636,"scrollY":402},
+{"id":5,"expanded":true,"name":"Sewers","order":5,"parentId":0,"scrollX":622.9090909090909,"scrollY":2514},
+{"id":6,"expanded":false,"name":"ForestEntry","order":6,"parentId":0,"scrollX":622.9090909090909,"scrollY":1046.7272727272727},
+{"id":7,"expanded":false,"name":"EasternForest","order":7,"parentId":0,"scrollX":622.9090909090909,"scrollY":2482.3636363636365},
+{"id":8,"expanded":false,"name":"ForestBoss","order":8,"parentId":0,"scrollX":820.3636363636364,"scrollY":393.2727272727273},
+{"id":9,"expanded":false,"name":"Controls","order":1,"parentId":0,"scrollX":631.6363636363636,"scrollY":402}
+]

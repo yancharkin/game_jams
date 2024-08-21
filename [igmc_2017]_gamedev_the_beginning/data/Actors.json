@@ -1,0 +1,5 @@
+[
+null,
+{"id":1,"battlerName":"Joe","characterIndex":0,"characterName":"Characters","classId":3,"equips":[1,1,0,0,0],"faceIndex":0,"faceName":"Faces","traits":[],"initialLevel":1,"maxLevel":99,"name":"Dude","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"Vito","characterIndex":7,"characterName":"Characters","classId":2,"equips":[0,0,0,0,0],"faceIndex":1,"faceName":"Faces","traits":[],"initialLevel":1,"maxLevel":99,"name":"Vito","nickname":"","note":"","profile":""}
+]

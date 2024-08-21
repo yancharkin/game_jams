@@ -1,0 +1,42 @@
+{
+    "name": "GameDev: The Beginning",
+    "short_name": "GameDev",
+    "description": "So you want to be a game developer?",
+    "icons": [
+        {
+            "src": "icon/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icon/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots" : [
+        {
+            "src": "screenshots/screenshot_00.webp",
+            "sizes": "816x460",
+            "type": "image/webp",
+            "form_factor": "wide",
+            "label": "Gameplay"
+        },
+        {
+            "src": "screenshots/screenshot_01.webp",
+            "sizes": "816x460",
+            "type": "image/webp",
+            "form_factor": "narrow",
+            "label": "Gameplay"
+        }
+    ],
+    "categories": [
+        "games"
+    ],
+    "theme_color": "#fff",
+    "background_color": "#000",
+    "orientation": "landscape",
+    "display": "fullscreen",
+    "start_url": "/game_jams/[igmc_2017]_gamedev_the_beginning/",
+    "id": "/game_jams/[igmc_2017]_gamedev_the_beginning/"
+}
