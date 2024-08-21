@@ -151,7 +151,6 @@ const filesList = [
     "/game_jams/[igmc_2017]_gamedev_the_beginning/audio/se/WalkGrass.ogg",
     "/game_jams/[igmc_2017]_gamedev_the_beginning/audio/se/WallHit.m4a",
     "/game_jams/[igmc_2017]_gamedev_the_beginning/audio/se/WallHit.ogg",
-    "/game_jams/[igmc_2017]_gamedev_the_beginning/CreateListFiles4Cache.sh",
     "/game_jams/[igmc_2017]_gamedev_the_beginning/data/Actors.json",
     "/game_jams/[igmc_2017]_gamedev_the_beginning/data/Animations.json",
     "/game_jams/[igmc_2017]_gamedev_the_beginning/data/Armors.json",
