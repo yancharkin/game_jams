@@ -1,5 +1,5 @@
 /*=============================================================================
-* _ALOE_VirtualButtons_Addon.js
+* ALOE_VirtualButtons_Addon.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -28,7 +28,7 @@
 "use strict";
 
 var gameInterpreter = new Game_Interpreter()
-var parameters = PluginManager.parameters('_ALOE_VirtualButtons_Addon');
+var parameters = PluginManager.parameters('ALOE_VirtualButtons_Addon');
 var optionName = parameters['optionName'] || 'Onscreen Controls';
 var disableTwoFingerTouch = (parameters['disableTwoFingerTouch'] === 'true');
 var defaultOpacity = Number(parameters['defaultOpacity']) || 255;

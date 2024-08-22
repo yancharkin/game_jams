@@ -1,5 +1,5 @@
 /*=============================================================================
-* _SetRenderer
+* YAN_SetRenderer
 *=============================================================================*/
 
 /*:=============================================================================
@@ -24,7 +24,7 @@
 *
 * =============================================================================*/
 
-var parameters = PluginManager.parameters('_SetRenderer');
+var parameters = PluginManager.parameters('YAN_SetRenderer');
 var mobile = String(parameters['mobile']) || 'auto';
 var desktop = String(parameters['desktop']) || 'auto';
 

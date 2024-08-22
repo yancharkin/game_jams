@@ -1,5 +1,5 @@
 /*=============================================================================
-* _HideInactiveCursor.js
+* YAN_HideInactiveCursor.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -13,7 +13,7 @@
 *
 * =============================================================================*/
 
-var parameters = PluginManager.parameters('_HideInactiveCursor');
+var parameters = PluginManager.parameters('YAN_HideInactiveCursor');
 var time = Number(parameters['time'])*1000 || 5000;
 var body = document.getElementsByTagName('body')[0];
 var timeout;
