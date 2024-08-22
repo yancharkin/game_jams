@@ -29,7 +29,7 @@
 * @param Colorful Options
 * @desc Recolor options status text !NB Colors form VE_SFont plugin used (59). Without plugin it should be changed.
 * @type boolean
-* default false
+* @default false
 *
 * @param Hide Help
 * @desc Hide Help Windows
