@@ -1,5 +1,5 @@
 /*=============================================================================
-* _TurnSwitchesOnStart.js
+* YAN_TurnSwitchesOnStart.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -12,7 +12,7 @@
 *
 * =============================================================================*/
 
-var parameters = PluginManager.parameters('_TurnSwitchesOnStart');
+var parameters = PluginManager.parameters('YAN_TurnSwitchesOnStart');
 var switchesArray = JSON.parse(parameters['switches']);
 
 var _Scene_Map_prototype_initialize_Alias = Scene_Map.prototype.initialize;

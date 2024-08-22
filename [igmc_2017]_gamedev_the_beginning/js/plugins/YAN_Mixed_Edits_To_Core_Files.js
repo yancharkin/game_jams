@@ -1,5 +1,5 @@
 /*=============================================================================
-* _Mixed_Edits_To_Core_Files.js
+* YAN_Mixed_Edits_To_Core_Files.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -47,7 +47,7 @@
 
 'use strict';
 
-var parameters = PluginManager.parameters('_Mixed_Edits_To_Core_Files');
+var parameters = PluginManager.parameters('YAN_Mixed_Edits_To_Core_Files');
 var filtering = (parameters['Filtering'] === 'true');
 
 var windowOpacity = Number(parameters['Base Window Opacity']) || 192;

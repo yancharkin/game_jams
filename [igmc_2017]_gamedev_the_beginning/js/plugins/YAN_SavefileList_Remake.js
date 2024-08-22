@@ -1,5 +1,5 @@
 /*=============================================================================
-* _SavefileList_Remake.js
+* YAN_SavefileList_Remake.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -14,7 +14,7 @@
 
 'use strict';
 
-var parameters = PluginManager.parameters('_SavefileList_Remake');
+var parameters = PluginManager.parameters('YAN_SavefileList_Remake');
 var savesNumber = Number(parameters['savesNumber']) || 10;
 
 // (Save/Load list) Separate items in the save file list

@@ -1,5 +1,5 @@
 /*=============================================================================
-* _SingleClickCommands
+* YAN_SingleClickCommands
 *=============================================================================*/
 
 /*:=============================================================================
@@ -23,7 +23,7 @@
 *
 * =============================================================================*/
 
-var parameters = PluginManager.parameters('_SingleClickCommands');
+var parameters = PluginManager.parameters('YAN_SingleClickCommands');
 var mobile = (parameters['mobile'] === 'true');
 var desktop = (parameters['desktop'] === 'true');
 

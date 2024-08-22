@@ -1,5 +1,5 @@
 /*=============================================================================
-* _CustomizeOptions.js
+* YAN_CustomizeOptions.js
 *=============================================================================*/
 
 /*:=============================================================================
@@ -49,7 +49,7 @@
 * @default true
 * =============================================================================*/
 
-var parameters = PluginManager.parameters('_CustomizeOptions');
+var parameters = PluginManager.parameters('YAN_CustomizeOptions');
 var dash = (parameters['dash'] === 'true');
 var commands = (parameters['commands'] === 'true');
 var bgm = (parameters['bgm'] === 'true');
