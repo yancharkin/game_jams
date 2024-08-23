@@ -32,7 +32,7 @@
 
     var parameters = PluginManager.parameters('FullscreenOptions');
     var noFsOption = String(parameters['siteWithoutFullscreenOption']) || 'itch';
-    var isStandaloneMobilePWA = Utils.isMobileDevice() && !window.matchMedia("(display-mode: fullscreen)").matches;
+    var isStandaloneMobilePWA = Utils.isMobileDevice() && !window.matchMedia("(display-mode: browser)").matches;
 
     /* Overwrite */
     Graphics._defaultStretchMode = function() {
