@@ -18,11 +18,6 @@
 * @desc Disable two finger touch and RMB on the map when a DPad is active.
 * @default true
 *
-* @param defaultOpacity
-* @text Default opacity
-* @desc Default opacity (0-255)
-* @type number
-* @default 255
 * =============================================================================*/
 
 "use strict";
@@ -31,7 +26,6 @@ var gameInterpreter = new Game_Interpreter()
 var parameters = PluginManager.parameters('ALOE_VirtualButtons_Addon');
 var optionName = parameters['optionName'] || 'Onscreen Controls';
 var disableTwoFingerTouch = (parameters['disableTwoFingerTouch'] === 'true');
-var defaultOpacity = Number(parameters['defaultOpacity']) || 255;
 
 var mainParameters = PluginManager.parameters('ALOE_VirtualButtons');
 var dpadActiveScenes = JSON.parse(JSON.parse(mainParameters['dPadSettings']).activeScenes);
