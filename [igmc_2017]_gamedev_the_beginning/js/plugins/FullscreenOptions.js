@@ -35,6 +35,7 @@
     var parameters = PluginManager.parameters('FullscreenOptions');
     var noFsOption = String(parameters['siteWioutFullscreenOption']) || 'itch';
     var disableOnMobile = (String(parameters['disableOnMobile']) === "true");
+    var isStandaloneMobilePWA = Utils.isMobileDevice() && !window.matchMedia("(display-mode: fullscreen)").matches;
 
     /* Overwrite */
     Graphics._defaultStretchMode = function() {
@@ -60,7 +61,9 @@
         }
     };
 
-    if ((!Utils.isMobileDevice() || !disableOnMobile) && (window.location.href.indexOf(noFsOption) == -1)) {
+    if ((!Utils.isMobileDevice() || !disableOnMobile || !isStandaloneMobilePWA)
+                            && (window.location.href.indexOf(noFsOption) == -1))
+    {
 
         var fullscreenOptionName = String(parameters['fullscreenOptionName']) || 'Fullscreen';
         var forceFullscreen = String(parameters['forceFullscreen']);
