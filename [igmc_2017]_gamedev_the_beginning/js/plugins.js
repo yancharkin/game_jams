@@ -41,7 +41,7 @@ var $plugins =
 {"name":"YAN_HideInactiveCursor","status":true,"description":"Hide mouse cursor if it's inactive for a specific time interval.","parameters":{"time":"3"}},
 {"name":"YAN_SingleClickCommands","status":true,"description":"Part of TDDP_MouseSystemEx.js by Tor Damian Design / Galenmereth.\nExecute menu commands immediately without selecting them first.","parameters":{"mobile":"false","desktop":"true"}},
 {"name":"YAN_CustomizeOptions","status":true,"description":"Enable/disable standard options in the options menu","parameters":{"dash":"false","commands":"true","bgm":"true","bgs":"true","me":"false","se":"false"}},
-{"name":"YEP_FpsSynchOption","status":true,"description":"v1.02 Adds a new command to Options menu for synching\nthe FPS of moniters with higher FPS rates.","parameters":{"Command Name":"Sync Monitor FPS","Default Setting":"false"}},
+{"name":"YEP_FpsSynchOption","status":true,"description":"v1.02 Adds a new command to Options menu for synching\nthe FPS of moniters with higher FPS rates.","parameters":{"Command Name":"Sync Display FPS","Default Setting":"false"}},
 {"name":"FullscreenOptions","status":true,"description":"Add fullscreen option, force fullscreen in Stretch Mode and disable F3.","parameters":{"fullscreenOptionName":"Fullscreen","forceFullscreen":"false","siteWioutFullscreenOption":"itch","disableOnMobile":"false"}},
 {"name":"YAN_TurnSwitchesOnStart","status":true,"description":"Turn on switches on start","parameters":{"switches":"[\"33\"]"}},
 {"name":"YAN_NoAccidentalDialogSkip","status":true,"description":"Dialogs do not paused if player using mouse or touch input.\nThis plugin fix this.","parameters":{}},
