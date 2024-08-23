@@ -4,6 +4,8 @@
 
 /*:=============================================================================
 * @plugindesc Add fullscreen option, force fullscreen in Stretch Mode and disable F3.
+* Mods by yancharkin: do no show option if running as standalone PWA on mobile,
+* ability to disable option on the specific site.
 * @author Krimer
 *
 * @param fullscreenOptionName
@@ -15,13 +17,9 @@
 * @desc Force fullscreen during first game start? true or false Default: false
 * @default false
 *
-* @param siteWioutFullscreenOption
+* @param siteWithoutFullscreenOption
 * @desc Disable fullscreen option on this site
 * @default itch
-*
-* @param disableOnMobile
-* @desc Disable fullscreen option on mobile devices
-* @default false
 *
 * @help
 * "config.rpgsave" from "save" folder must be deleted to perform clean
@@ -33,8 +31,7 @@
 (function() {
 
     var parameters = PluginManager.parameters('FullscreenOptions');
-    var noFsOption = String(parameters['siteWioutFullscreenOption']) || 'itch';
-    var disableOnMobile = (String(parameters['disableOnMobile']) === "true");
+    var noFsOption = String(parameters['siteWithoutFullscreenOption']) || 'itch';
     var isStandaloneMobilePWA = Utils.isMobileDevice() && !window.matchMedia("(display-mode: fullscreen)").matches;
 
     /* Overwrite */
@@ -61,9 +58,7 @@
         }
     };
 
-    if ((!Utils.isMobileDevice() || !disableOnMobile || !isStandaloneMobilePWA)
-                            && (window.location.href.indexOf(noFsOption) == -1))
-    {
+    if (!isStandaloneMobilePWA && (window.location.href.indexOf(noFsOption) == -1)) {
 
         var fullscreenOptionName = String(parameters['fullscreenOptionName']) || 'Fullscreen';
         var forceFullscreen = String(parameters['forceFullscreen']);
