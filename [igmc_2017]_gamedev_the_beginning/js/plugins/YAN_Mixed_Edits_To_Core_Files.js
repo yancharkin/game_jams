@@ -85,14 +85,13 @@ if (colorfulOptions) {
         this.changePaintOpacity(this.isCommandEnabled(index));
         this.drawText(this.commandName(index), rect.x, rect.y, titleWidth, 'left');
         if (this.statusText(index) == 'ON') {
-            this.changeTextColor(this.textColor(59)); //orange
+            this.changeTextColor(this.textColor(59));
         } else if (this.statusText(index) == 'OFF' || this.statusText(index) == '0%') {
-            this.changeTextColor(this.textColor(25));// grey
+            this.changeTextColor(this.textColor(25));
         } else {
-            //this.changeTextColor(this.textColor(17)); //yellow
-            this.changeTextColor(this.textColor(24)); //green
+            this.changeTextColor(this.textColor(24));
         };
-        this.drawText(this.statusText(index), titleWidth, rect.y, statusWidth, 'right');
+        this.drawText(this.statusText(index), titleWidth + 8, rect.y, statusWidth, 'right');
     };
 };
 
