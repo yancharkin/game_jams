@@ -11,6 +11,7 @@ Imported.CXJ_Exit = "1.0.1";
 
 /*:
  * @plugindesc Adds an exit option to desktop versions of the game
+ * Modification by yancharkin: add exit button to installed PWA
  * @author G.A.M. Kertopermono
  *
  * @param Text - Exit
@@ -58,7 +59,7 @@ Imported.CXJ_Exit = "1.0.1";
  *
  * On non-desktop browsers the game won't add the exit options. They could be
  * made visible, but they don't work, so it's pretty useless to keep them.
- * 
+ *
  * ============================================================================
  * = Plugin Commands                                                          =
  * ============================================================================
@@ -73,7 +74,7 @@ Imported.CXJ_Exit = "1.0.1";
  * ============================================================================
  * = Compatibility                                                            =
  * ============================================================================
- * 
+ *
  * This plugin overwrites the functions listed below, but still uses the old
  * version, either as the basis for the function or as a fallback. It is
  * advised to place this script below other scripts that use these functions.
@@ -116,9 +117,16 @@ Imported.CXJ_Exit = "1.0.1";
  * https://creativecommons.org/publicdomain/zero/1.0/
  * ============================================================================
  */
- 
+
+//* Modification by yancharkin
+var isMobile = Utils.isMobileDevice();
+var isNwjs = Utils.isNwjs();
+var isStandalonePWA = !window.matchMedia("(display-mode: browser)").matches;
+var exitButtonRequired = !isMobile && (isNwjs || isStandalonePWA);
+
 +function() {
-  if(Utils.isNwjs()) {
+  //* if(Utils.isNwjs()) {
+  if(exitButtonRequired) {
     var _pluginName = 'CXJ_Exit';
     var _propNames = ['Text - Exit', 'Text - To Desktop', 'Add to title', 'Add to Game End'];
     var _defaultParams = {
@@ -129,7 +137,7 @@ Imported.CXJ_Exit = "1.0.1";
     };
 
     var _getParameters = function(pluginName, propNames, defaultParams) {
-      
+
       /* Private function that checks plugin content */
       var _checkPluginContent = function(parameters) {
         for(var prop in parameters) {
@@ -139,9 +147,9 @@ Imported.CXJ_Exit = "1.0.1";
         }
         return false;
       }
-      
+
       var parameters = PluginManager.parameters(pluginName);
-      
+
       if(_checkPluginContent(parameters)) {
         return parameters;
       }
@@ -152,7 +160,7 @@ Imported.CXJ_Exit = "1.0.1";
         scriptName = scriptName.substr(0, scriptName.lastIndexOf('.js'));
         parameters = PluginManager.parameters(scriptName);
       }
-      
+
       if(_checkPluginContent(parameters)) {
         return parameters;
       }
@@ -176,12 +184,12 @@ Imported.CXJ_Exit = "1.0.1";
       }
       return _defaultParams;
     }
-    
+
     var parameters = _getParameters(_pluginName, _propNames, _defaultParams);
-    
+
     TextManager.cxjExit = parameters['Text - Exit'];
     TextManager.cxjToDesktop = parameters['Text - To Desktop'];
-    
+
     /*----------------*
      *- Title screen -*
      *----------------*/
@@ -192,13 +200,13 @@ Imported.CXJ_Exit = "1.0.1";
           oldCreateCommandWindow.apply(this, arguments);
           this._commandWindow.setHandler('exit',  this.commandExit.bind(this));
         }
-        
+
         Scene_Title.prototype.commandExit = function() {
           this._commandWindow.close();
           this.fadeOutAll();
           SceneManager.exit();
         }
-        
+
         var oldMakeCommandList = Window_TitleCommand.prototype.makeCommandList;
         Window_TitleCommand.prototype.makeCommandList = function() {
           oldMakeCommandList.apply(this, arguments);
@@ -206,11 +214,11 @@ Imported.CXJ_Exit = "1.0.1";
         }
       }();
     }
-    
+
     /*------------*
      *- Game End -*
      *------------*/
-     
+
     if(parameters['Add to Game End'].toLowerCase() != 'false') {
       +function() {
         var oldCreateCommandWindow = Scene_GameEnd.prototype.createCommandWindow;
@@ -218,13 +226,13 @@ Imported.CXJ_Exit = "1.0.1";
           oldCreateCommandWindow.call(this);
           this._commandWindow.setHandler('exit',  this.commandExit.bind(this));
         }
-        
+
         Scene_GameEnd.prototype.commandExit = function() {
           this._commandWindow.close();
           this.fadeOutAll();
           SceneManager.exit();
         }
-        
+
         var oldMakeCommandList = Window_GameEnd.prototype.makeCommandList;
         Window_GameEnd.prototype.makeCommandList = function() {
           oldMakeCommandList.call(this);
@@ -237,7 +245,7 @@ Imported.CXJ_Exit = "1.0.1";
         }
       }();
     }
-    
+
     /*------------------*
      *- Plugin Command -*
      *------------------*/
