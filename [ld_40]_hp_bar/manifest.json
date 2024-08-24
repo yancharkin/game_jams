@@ -1,0 +1,42 @@
+{
+    "name": "HP Bar",
+    "short_name": "HP Bar",
+    "description": "A short, depressing (or maybe not?) game about a guy whose HP bar was too large.",
+    "icons": [
+        {
+            "src": "icon/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icon/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots" : [
+        {
+            "src": "screenshots/screenshot_00.webp",
+            "sizes": "816x460",
+            "type": "image/webp",
+            "form_factor": "wide",
+            "label": "Gameplay"
+        },
+        {
+            "src": "screenshots/screenshot_01.webp",
+            "sizes": "816x460",
+            "type": "image/webp",
+            "form_factor": "narrow",
+            "label": "Gameplay"
+        }
+    ],
+    "categories": [
+        "games"
+    ],
+    "theme_color": "#fff",
+    "background_color": "#000",
+    "orientation": "landscape",
+    "display": "fullscreen",
+    "start_url": "/game_jams/[ld_40]_hp_bar/",
+    "id": "/game_jams/[ld_40]_hp_bar/"
+}

@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"battlerName":"Blue","characterIndex":0,"characterName":"Characters","classId":1,"equips":[],"faceIndex":0,"faceName":"Faces1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Blue","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"Brown","characterIndex":1,"characterName":"Characters","classId":2,"equips":[0,0,0,0,0],"faceIndex":1,"faceName":"Faces1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Brown","nickname":"","note":"","profile":""},
+{"id":3,"battlerName":"Orange","characterIndex":2,"characterName":"Characters","classId":2,"equips":[0,0,0,0,0],"faceIndex":2,"faceName":"Faces1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Orange","nickname":"","note":"","profile":""},
+{"id":4,"battlerName":"Purple","characterIndex":3,"characterName":"Characters","classId":2,"equips":[0,0,0,0,0],"faceIndex":3,"faceName":"Faces1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Purple","nickname":"","note":"","profile":""}
+]

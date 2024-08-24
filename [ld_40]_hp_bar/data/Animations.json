@@ -1,0 +1,6 @@
+[
+null,
+{"id":1,"animation1Hue":0,"animation1Name":"Hit1","animation2Hue":0,"animation2Name":"","frames":[[],[[0,0,0,100,0,0,255,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0]],[[1,0,0,100,0,0,255,0]],[[2,0,0,100,0,0,255,0]],[[3,0,0,100,0,0,255,0]]],"name":"Hit","position":1,"timings":[{"flashColor":[255,255,255,255],"flashDuration":5,"flashScope":0,"frame":0,"se":{"name":"Hit","pan":0,"pitch":130,"volume":90}}]},
+{"id":2,"animation1Hue":0,"animation1Name":"HitFire","animation2Hue":0,"animation2Name":"","frames":[[],[[0,0,0,100,0,0,255,1],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0]],[[1,0,0,100,0,0,255,1]],[[2,0,0,100,0,0,255,1]],[[3,0,0,100,0,0,255,1]]],"name":"HitFire","position":1,"timings":[{"flashColor":[255,255,255,255],"flashDuration":5,"flashScope":0,"frame":0,"se":{"name":"Hit","pan":0,"pitch":130,"volume":90}}]},
+{"id":3,"animation1Hue":0,"animation1Name":"Heal","animation2Hue":0,"animation2Name":"","frames":[[],[[0,0,0,100,0,0,255,1],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0]],[[1,0,0,100,0,0,255,1]],[[2,0,0,100,0,0,255,1]],[[3,0,0,100,0,0,255,1]]],"name":"Heal","position":1,"timings":[{"flashColor":[255,255,255,255],"flashDuration":5,"flashScope":0,"frame":0,"se":{"name":"Save","pan":0,"pitch":110,"volume":90}}]}
+]
