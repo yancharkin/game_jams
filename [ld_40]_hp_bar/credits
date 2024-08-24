@@ -1,0 +1,23 @@
+################################################################################
+#                                  Plugins                                     #
+################################################################################
+
+ALOE_VirtualButtons
+Community_Basic
+CXJ_Exit
+FullscreenOptions
+GALV_CustomTitle
+GALV_DiagonalMovement
+GALV_MessageStyles
+MOG_ActorTurnIndicator
+MOG_Weather_EX
+No Autoshadow
+SRD_BattleStatusCustomizer
+VE_BasicModule
+VE_SFont
+YEP_BattleEngineCore
+YEP_FpsSynchOption
+YEP_MainMenuManager
+YEP_RegionRestrictions
+YEP_X_VisualHpGauge
+YSP_Preloader

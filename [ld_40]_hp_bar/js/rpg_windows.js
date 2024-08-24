@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_windows.js v1.5.0
+// rpg_windows.js v1.6.2
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -71,8 +71,7 @@ Window_Base.prototype.updatePadding = function() {
 };
 
 Window_Base.prototype.updateBackOpacity = function() {
-    //~ this.backOpacity = this.standardBackOpacity();
-    this.backOpacity = 255;
+    this.backOpacity = this.standardBackOpacity();
 };
 
 Window_Base.prototype.contentsWidth = function() {
@@ -1414,8 +1413,7 @@ Window_Command.prototype.drawItem = function(index) {
 };
 
 Window_Command.prototype.itemTextAlign = function() {
-    //~ return 'left';
-    return 'center';
+    return 'left';
 };
 
 Window_Command.prototype.isOkEnabled = function() {
@@ -1896,7 +1894,6 @@ Window_ItemCategory.prototype.makeCommandList = function() {
 
 Window_ItemCategory.prototype.setItemWindow = function(itemWindow) {
     this._itemWindow = itemWindow;
-    this.update();
 };
 
 //-----------------------------------------------------------------------------
@@ -2072,7 +2069,6 @@ Window_SkillType.prototype.update = function() {
 
 Window_SkillType.prototype.setSkillWindow = function(skillWindow) {
     this._skillWindow = skillWindow;
-    this.update();
 };
 
 Window_SkillType.prototype.selectLast = function() {
@@ -2433,7 +2429,6 @@ Window_EquipSlot.prototype.setStatusWindow = function(statusWindow) {
 
 Window_EquipSlot.prototype.setItemWindow = function(itemWindow) {
     this._itemWindow = itemWindow;
-    this.update();
 };
 
 Window_EquipSlot.prototype.updateHelp = function() {
@@ -5903,7 +5898,6 @@ Window_DebugRange.prototype.processCancel = function() {
 
 Window_DebugRange.prototype.setEditWindow = function(editWindow) {
     this._editWindow = editWindow;
-    this.update();
 };
 
 //-----------------------------------------------------------------------------

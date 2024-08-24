@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_core.js v1.5.0
+// rpg_core.js v1.6.2
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -180,7 +180,7 @@ Utils.RPGMAKER_NAME = 'MV';
  * @type String
  * @final
  */
-Utils.RPGMAKER_VERSION = "1.5.0";
+Utils.RPGMAKER_VERSION = "1.6.1";
 
 /**
  * Checks whether the option is in the query string.
@@ -191,7 +191,9 @@ Utils.RPGMAKER_VERSION = "1.5.0";
  * @return {Boolean} True if the option is in the query string
  */
 Utils.isOptionValid = function(name) {
-    return location.search.slice(1).split('&').contains(name);
+    if (location.search.slice(1).split('&').contains(name)) {return 1;};
+    if (typeof nw !== "undefined" && nw.App.argv.length > 0 && nw.App.argv[0].split('&').contains(name)) {return 1;};
+    return 0;
 };
 
 /**
@@ -1743,7 +1745,7 @@ Graphics.initialize = function(width, height, type) {
     this._errorPrinter = null;
     this._canvas = null;
     this._video = null;
-    this._videoUnlocked = !Utils.isMobileDevice();
+    this._videoUnlocked = false;
     this._videoLoading = false;
     this._upperCanvas = null;
     this._renderer = null;
@@ -2364,6 +2366,8 @@ Graphics._updateRealScale = function() {
     if (this._stretchEnabled) {
         var h = window.innerWidth / this._width;
         var v = window.innerHeight / this._height;
+        if (h >= 1 && h - 0.01 <= 1) h = 1;
+        if (v >= 1 && v - 0.01 <= 1) v = 1;
         this._realScale = Math.min(h, v);
     } else {
         this._realScale = this._scale;
@@ -2804,6 +2808,8 @@ Graphics._isVideoVisible = function() {
 Graphics._setupEventHandlers = function() {
     window.addEventListener('resize', this._onWindowResize.bind(this));
     document.addEventListener('keydown', this._onKeyDown.bind(this));
+    document.addEventListener('keydown', this._onTouchEnd.bind(this));
+    document.addEventListener('mousedown', this._onTouchEnd.bind(this));
     document.addEventListener('touchend', this._onTouchEnd.bind(this));
 };
 
@@ -4387,7 +4393,7 @@ Sprite.prototype._renderWebGL = function(renderer) {
         //copy of pixi-v4 internal code
         this.calculateVertices();
 
-        if (this._isPicture) {
+        if (this.pluginName === 'sprite' && this._isPicture) {
             // use heavy renderer, which reduces artifacts and applies corrent blendMode,
             // but does not use multitexture optimization
             this._speedUpCustomBlendModes(renderer);
@@ -4395,8 +4401,8 @@ Sprite.prototype._renderWebGL = function(renderer) {
             renderer.plugins.picture.render(this);
         } else {
             // use pixi super-speed renderer
-            renderer.setObjectRenderer(renderer.plugins.sprite);
-            renderer.plugins.sprite.render(this);
+            renderer.setObjectRenderer(renderer.plugins[this.pluginName]);
+			renderer.plugins[this.pluginName].render(this);
         }
     }
 };
@@ -5481,14 +5487,14 @@ Tilemap.WATERFALL_AUTOTILE_TABLE = [
 function ShaderTilemap() {
     Tilemap.apply(this, arguments);
     this.roundPixels = true;
-};
+}
 
 ShaderTilemap.prototype = Object.create(Tilemap.prototype);
 ShaderTilemap.prototype.constructor = ShaderTilemap;
 
 // we need this constant for some platforms (Samsung S4, S5, Tab4, HTC One H8)
 PIXI.glCore.VertexArrayObject.FORCE_NATIVE = true;
-PIXI.GC_MODES.DEFAULT = PIXI.GC_MODES.AUTO;
+PIXI.settings.GC_MODE = PIXI.GC_MODES.AUTO;
 PIXI.tilemap.TileRenderer.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 PIXI.tilemap.TileRenderer.DO_CLEAR = true;
 
@@ -7803,16 +7809,19 @@ WebAudio._createMasterGainNode = function() {
  * @private
  */
 WebAudio._setupEventHandlers = function() {
-    document.addEventListener("touchend", function() {
-            var context = WebAudio._context;
-            if (context && context.state === "suspended" && typeof context.resume === "function") {
-                context.resume().then(function() {
-                    WebAudio._onTouchStart();
-                })
-            } else {
+    var resumeHandler = function() {
+        var context = WebAudio._context;
+        if (context && context.state === "suspended" && typeof context.resume === "function") {
+            context.resume().then(function() {
                 WebAudio._onTouchStart();
-            }
-    });
+            })
+        } else {
+            WebAudio._onTouchStart();
+        }
+    };
+    document.addEventListener("keydown", resumeHandler);
+    document.addEventListener("mousedown", resumeHandler);
+    document.addEventListener("touchend", resumeHandler);
     document.addEventListener('touchstart', this._onTouchStart.bind(this));
     document.addEventListener('visibilitychange', this._onVisibilityChange.bind(this));
 };
@@ -8197,6 +8206,11 @@ WebAudio.prototype._onXhrLoad = function(xhr) {
  * @private
  */
 WebAudio.prototype._startPlaying = function(loop, offset) {
+    if (this._loopLength > 0) {
+     while (offset >= this._loopStart + this._loopLength) {
+     offset -= this._loopLength;
+     }
+    }
     this._removeEndTimer();
     this._removeNodes();
     this._createNodes();

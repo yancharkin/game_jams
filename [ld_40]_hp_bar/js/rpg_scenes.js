@@ -1,5 +1,5 @@
 //=============================================================================
-// rpg_scenes.js v1.5.0
+// rpg_scenes.js v1.6.2
 //=============================================================================
 
 //=============================================================================
@@ -536,10 +536,6 @@ Scene_Title.prototype.playTitleMusic = function() {
 
 function Scene_Map() {
     this.initialize.apply(this, arguments);
-    //+++++++++++++++++++++++++++++++//
-    $gameSwitches.setValue(1, true); // Trigger 'InfiniteLoop'
-    //$gameSwitches.setValue(4, true); // Trigger 'HudVisible'
-    //+++++++++++++++++++++++++++++++//
 }
 
 Scene_Map.prototype = Object.create(Scene_Base.prototype);

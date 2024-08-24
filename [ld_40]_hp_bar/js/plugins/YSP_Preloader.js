@@ -35,9 +35,9 @@ ysp.Preloader.GLOBAL = {
 ysp.Preloader.MAP_BASED = {
     // TEMPLATE
     // ID: { IMAGES: [], VIDEOS: [] }
-    2: {
+    1: {
         IMAGES: [
-            'pictures/HoursLater',
+            'pictures/Black',
         ],
 
         VIDEOS: [
@@ -47,7 +47,7 @@ ysp.Preloader.MAP_BASED = {
 
     3: {
         IMAGES: [
-            'pictures/10YearsLater',
+            'pictures/15YearsLater',
         ],
 
         VIDEOS: [

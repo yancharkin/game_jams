@@ -2,6 +2,6 @@
 null,
 {"id":1,"list":[{"code":111,"indent":0,"parameters":[12,"$gamePlayer.isMoving()"]},{"code":121,"indent":1,"parameters":[2,2,0]},{"code":0,"indent":1,"parameters":[]},{"code":411,"indent":0,"parameters":[]},{"code":121,"indent":1,"parameters":[2,2,1]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":122,"indent":0,"parameters":[6,6,0,4,"$gameParty.leader().hp"]},{"code":0,"indent":0,"parameters":[]}],"name":"InfiniteLoop","switchId":1,"trigger":2},
 {"id":2,"list":[{"code":355,"indent":0,"parameters":["SceneManager.push(Scene_Load);"]},{"code":0,"indent":0,"parameters":[]}],"name":"LoadGame","switchId":1,"trigger":0},
-{"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
+{"id":3,"list":[{"code":356,"indent":0,"parameters":["virtualbuttons hide all instant"]},{"code":0,"indent":0,"parameters":[]}],"name":"OnscreenCtrlsHide","switchId":1,"trigger":0},
+{"id":4,"list":[{"code":111,"indent":0,"parameters":[12,"ConfigManager.onscreenControls"]},{"code":356,"indent":1,"parameters":["virtualbuttons show all instant"]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":0,"indent":0,"parameters":[]}],"name":"OnscreenCtrlsShowIfNeeded","switchId":1,"trigger":0}
 ]
