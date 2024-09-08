@@ -1,0 +1,12 @@
+id,en,ru
+START_GAME,Start game,Начать игру
+RESUME_GAME,Resume game,Продолжить игру
+QUIT_TO_MAIN_MENU,Quit to main menu,Выйти в главное меню
+QUIT_GAME,Quit game,Выйти из игры
+GAME_OVER,GAME OVER,ИГРА ОКОНЧЕНА
+RESTART,Restart,Перезапустить
+GO_TO_MAIN_MENU,Go to main menu,Выйти в главное меню
+YOUR_NAME,Your name: ,Твоё имя: 
+LEADERBOARD,Leaderboard,Рекорды
+REPEAT,Repeat,Повторить
+CONFIRM,Confirm,Подтвердить

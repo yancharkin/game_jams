@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Forest_A2.png-dc86cb7f205b180a9c8cf78f46a4cd88.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://tilesets/Forest/images/Forest_A2.png"
+dest_files=[ "res://.import/Forest_A2.png-dc86cb7f205b180a9c8cf78f46a4cd88.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

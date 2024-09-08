@@ -1,0 +1,380 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tilesets/Forest/images/Forest_A2.png" type="Texture" id=1]
+[ext_resource path="res://tilesets/Forest/images/Forest_B.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 21.8657, 0.186005, 9.20193, 3.40559, 1.47492, 14.3522, 1.26028, 30.0209, 4.69451, 37.5333, 14.7826, 40.5382, 19.9339, 41.1821, 20.7925, 44.1871, 27.4463, 45.2603, 28.0902, 41.1821, 43.115, 37.9625, 47.837, 30.0209, 43.9735, 23.3671, 45.476, 14.1376, 38.6075, 4.26416, 29.378, -0.457916 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 20.8666, 45.4695, 20.3526, 40.586, 14.441, 41.2285, 5.44511, 39.0438, -0.337952, 29.9194, 3.51743, 25.0359, 0.947174, 18.4818, 5.3166, 10.257, 14.5695, 1.26114, 26.1356, 0.490067, 35.517, 2.93179, 43.7419, 11.9277, 45.1555, 19.2529, 43.2278, 24.5219, 47.0832, 30.0479, 45.541, 36.2166, 37.9588, 40.3289, 30.248, 40.2004, 27.5493, 40.9715, 27.4208, 45.855 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 20.9718, 45.3663, 20.5446, 40.24, 15.2759, 41.0944, 6.0202, 38.6737, 1.74831, 33.8322, 1.32112, 29.1331, 4.73862, 25.2884, 0.324341, 20.447, 1.60591, 12.9, 9.7225, 4.92578, 20.9718, 0.226715, 29.658, 1.22348, 38.0593, 5.63776, 45.4639, 14.1815, 45.3215, 19.1654, 43.8976, 24.1493, 47.4575, 28.8483, 45.4639, 34.829, 40.3377, 39.2433, 31.7939, 40.8096, 27.6644, 40.5248, 26.9524, 45.2239 )
+
+[node name="Forest" type="Node"]
+
+[node name="GroundGrass_0" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="GroundGrass_1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 144, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ground" type="Sprite" parent="." index="2"]
+
+position = Vector2( 192, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 0, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Grass_0" type="Sprite" parent="." index="3"]
+
+position = Vector2( 0, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 384, 0, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Grass_1" type="Sprite" parent="." index="4"]
+
+position = Vector2( 96, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 480, 0, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Bush_0" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 0, 192 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 0, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bush_0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bush_0/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 20.1398, 45.5464, 1.15611, 33.9237, 1.15611, 17.4582, 48.0343, 17.2645, 47.2594, 33.1488, 40.6732, 39.735, 27.3072, 45.9338 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Bush_0" index="1"]
+
+occluder = SubResource( 1 )
+light_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bush_1" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 96, 192 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 48, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bush_1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bush_1/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 20.1398, 45.5464, 1.15611, 33.9237, 1.15611, 17.4582, 48.0343, 17.2645, 47.2594, 33.1488, 40.6732, 39.735, 27.3072, 45.9338 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Bush_1" index="1"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bush_2" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 192, 192 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 48, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bush_2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bush_2/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 20.1398, 45.5464, 1.15611, 33.9237, 1.15611, 17.4582, 48.0343, 17.2645, 47.2594, 33.1488, 40.6732, 39.735, 27.3072, 45.9338 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Bush_2" index="1"]
+
+occluder = SubResource( 3 )
+light_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tree_0" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 0, 288 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 96, 0, 96, 96 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree_0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree_0/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 42.3742, 91.1139, 41.6607, 78.0334, 13.0616, 68.4977, 4.49979, 41.1476, 91.0688, 40.672, 82.7448, 70.6382, 53.7899, 77.3199, 53.3143, 90.876 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tree_1" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 144, 288 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 0, 96, 96 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree_1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree_1/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 42.6899, 90.3742, 17.7181, 79.672, 26.7555, 47.0897, 70.2779, 47.3275, 78.8396, 78.0072, 53.8678, 91.0877 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Flower_0" type="Sprite" parent="." index="10"]
+
+position = Vector2( 384, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 336, 48, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flower_1" type="Sprite" parent="." index="11"]
+
+position = Vector2( 288, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 96, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flower_2" type="Sprite" parent="." index="12"]
+
+position = Vector2( 336, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 96, 144, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flower_3" type="Sprite" parent="." index="13"]
+
+position = Vector2( 432, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 240, 144, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flower_4" type="Sprite" parent="." index="14"]
+
+position = Vector2( 480, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 336, 144, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Mashroom_0" type="Sprite" parent="." index="15"]
+
+position = Vector2( 288, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 192, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Mashroom_1" type="Sprite" parent="." index="16"]
+
+position = Vector2( 336, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 144, 240, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Rocks_0" type="Sprite" parent="." index="17"]
+
+position = Vector2( 432, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 240, 240, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Rocks_1" type="Sprite" parent="." index="18"]
+
+position = Vector2( 480, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 240, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Rocks_2" type="Sprite" parent="." index="19"]
+
+position = Vector2( 528, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 192, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Rocks_3" type="Sprite" parent="." index="20"]
+
+position = Vector2( 384, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 240, 192, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Leaves_0" type="Sprite" parent="." index="21"]
+
+position = Vector2( 288, 96 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 192, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Leaves_1" type="Sprite" parent="." index="22"]
+
+position = Vector2( 336, 96 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 240, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Leaves_2" type="Sprite" parent="." index="23"]
+
+position = Vector2( 384, 96 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 336, 192, 48, 96 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+

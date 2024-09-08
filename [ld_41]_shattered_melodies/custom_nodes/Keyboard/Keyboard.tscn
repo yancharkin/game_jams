@@ -1,0 +1,373 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://themes/Default/Default.theme" type="Theme" id=1]
+[ext_resource path="res://custom_nodes/Keyboard/Keyboard.gd" type="Script" id=2]
+[ext_resource path="res://custom_nodes/Key/Key.tscn" type="PackedScene" id=3]
+[ext_resource path="res://custom_nodes/Key/images/key_white.png" type="Texture" id=4]
+[ext_resource path="res://custom_nodes/Key/images/key_black.png" type="Texture" id=5]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_play_up.png" type="Texture" id=6]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_play_down.png" type="Texture" id=7]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_rec_up.png" type="Texture" id=8]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_rec_down.png" type="Texture" id=9]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_clear_up.png" type="Texture" id=10]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_clear_down.png" type="Texture" id=11]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_ok_up.png" type="Texture" id=12]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_ok_down.png" type="Texture" id=13]
+[ext_resource path="res://custom_nodes/Keyboard/images/btn_ok_disabled.png" type="Texture" id=14]
+
+[node name="Keyboard" type="ColorRect"]
+
+pause_mode = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+color = Color( 0, 0, 0, 0.501961 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Theme" ]
+
+[node name="Naturals" type="HBoxContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -96.0
+margin_right = 180.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KeyC" parent="Naturals" index="0" instance=ExtResource( 3 )]
+
+margin_right = 48.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+
+[node name="KeyD" parent="Naturals" index="1" instance=ExtResource( 3 )]
+
+margin_left = 52.0
+margin_right = 100.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "d"
+
+[node name="KeyE" parent="Naturals" index="2" instance=ExtResource( 3 )]
+
+margin_left = 104.0
+margin_right = 152.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "e"
+
+[node name="KeyF" parent="Naturals" index="3" instance=ExtResource( 3 )]
+
+margin_left = 156.0
+margin_right = 204.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "f"
+
+[node name="KeyG" parent="Naturals" index="4" instance=ExtResource( 3 )]
+
+margin_left = 208.0
+margin_right = 256.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "g"
+
+[node name="KeyA" parent="Naturals" index="5" instance=ExtResource( 3 )]
+
+margin_left = 260.0
+margin_right = 308.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "a"
+
+[node name="KeyB" parent="Naturals" index="6" instance=ExtResource( 3 )]
+
+margin_left = 312.0
+margin_right = 360.0
+margin_bottom = 192.0
+texture_normal = ExtResource( 4 )
+note = "b"
+
+[node name="KeyCis" parent="." index="1" instance=ExtResource( 3 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -142.0
+margin_top = -96.0
+margin_right = -118.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 5 )
+note = "cis"
+
+[node name="KeyDis" parent="." index="2" instance=ExtResource( 3 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -96.0
+margin_right = -66.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 5 )
+note = "dis"
+
+[node name="KeyFis" parent="." index="3" instance=ExtResource( 3 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 14.0
+margin_top = -96.0
+margin_right = 38.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 5 )
+note = "fis"
+
+[node name="KeyGis" parent="." index="4" instance=ExtResource( 3 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 66.0
+margin_top = -96.0
+margin_right = 90.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 5 )
+note = "gis"
+
+[node name="KeyAis" parent="." index="5" instance=ExtResource( 3 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 118.0
+margin_top = -96.0
+margin_right = 142.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 5 )
+note = "ais"
+
+[node name="Result" type="HBoxContainer" parent="." index="6"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -156.0
+margin_right = 180.0
+margin_bottom = -110.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 5
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HBoxControls" type="HBoxContainer" parent="." index="7"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = 108.0
+margin_right = 180.0
+margin_bottom = 156.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ButtonRepeat" type="TextureButton" parent="HBoxControls" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_right = 79.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="ButtonRecord" type="TextureButton" parent="HBoxControls" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 98.0
+margin_right = 170.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="ButtonClear" type="TextureButton" parent="HBoxControls" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 189.0
+margin_right = 261.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="ButtonConfirm" type="TextureButton" parent="HBoxControls" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_right = 352.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Audio" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="TimerPause" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="TimerPlayback" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="clicked" from="Naturals/KeyC" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyD" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyE" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyF" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyG" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyA" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="Naturals/KeyB" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="KeyCis" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="KeyDis" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="KeyFis" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="KeyGis" to="." method="_on_Key_clicked"]
+
+[connection signal="clicked" from="KeyAis" to="." method="_on_Key_clicked"]
+
+[connection signal="pressed" from="HBoxControls/ButtonRepeat" to="." method="_on_ButtonRepeat_pressed"]
+
+[connection signal="toggled" from="HBoxControls/ButtonRecord" to="." method="_on_ButtonRecord_toggled"]
+
+[connection signal="pressed" from="HBoxControls/ButtonClear" to="." method="_on_ButtonClear_pressed"]
+
+[connection signal="pressed" from="HBoxControls/ButtonConfirm" to="." method="_on_ButtonConfirm_pressed"]
+
+[connection signal="timeout" from="TimerPause" to="." method="_on_TimerPause_timeout"]
+
+[connection signal="timeout" from="TimerPlayback" to="." method="_on_TimerPlayback_timeout"]
+
+

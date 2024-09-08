@@ -1,0 +1,9 @@
+[gd_resource type="DynamicFont" format=2]
+
+[resource]
+
+size = 64
+use_mipmaps = false
+use_filter = false
+_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
+
