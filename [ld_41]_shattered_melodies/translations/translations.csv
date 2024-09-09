@@ -1,12 +1,36 @@
-id,en,ru
-START_GAME,Start game,Начать игру
-RESUME_GAME,Resume game,Продолжить игру
-QUIT_TO_MAIN_MENU,Quit to main menu,Выйти в главное меню
-QUIT_GAME,Quit game,Выйти из игры
-GAME_OVER,GAME OVER,ИГРА ОКОНЧЕНА
-RESTART,Restart,Перезапустить
-GO_TO_MAIN_MENU,Go to main menu,Выйти в главное меню
-YOUR_NAME,Your name: ,Твоё имя: 
-LEADERBOARD,Leaderboard,Рекорды
-REPEAT,Repeat,Повторить
-CONFIRM,Confirm,Подтвердить
+id,en,es,ru,uk
+LEADERBOARD,Leaderboard,Tabla de clasificación,Рекорды,Рекорди
+YOUR_NAME,Your Name: ,Tu nombre: ,Твоё имя: ,Твоє ім'я: 
+QUIT,Quit,Salir,Выход,Вихід
+START,Start,Iniciar,Старт,Старт
+RESUME,Resume,Reanudar,Продолжить,Продовжити
+MAIN_MENU,Main Menu,Menú principal,Главное меню,Головне меню
+GAME_OVER,GAME OVER,   FIN   ,КОНЕЦ,КІНЕЦЬ
+VICTORY,VICTORY!,¡VICTORIA!,ПОБЕДА!,ПЕРЕМОГА!
+RESTART,Restart,Reiniciar,Перезапустить,Перезапустити
+PLAY,"Play
+(Space)","Reproducir
+(Barra espaciadora)","Воспроизвести
+(Space)","Відтворити
+(Space)"
+RECORD,"Record
+(R)","Grabar
+(R)","Записать
+(R)","Записати
+(R)"
+PIANO_SYNTH,"Piano/synth
+(Tab)","Piano/Sintetizador
+(Tab)","Фортепиано/синт
+(Tab)","Фортепіано/синт
+(Tab)"
+CLEAR,"Clear
+(Q, Backspace)","Borrar
+(Q, Retroceso)","Очистить
+(Q, Backspace)","Очистити
+(Q, Backspace)"
+CONFIRM,"Confirm
+(E, Enter)","Confirmar
+(E, Entrar)","Подтвердить
+(E, Enter)","Підтвердити
+(E, Enter)"
+PLAYER,Player,Jugador,Игрок,Гравець

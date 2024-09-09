@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ais.wav-42ab8932416661c85c9e105ec8734380.sample"
+
+[deps]
+
+source_file="res://custom_nodes/Key/sounds/synth/ais.wav"
+dest_files=[ "res://.import/ais.wav-42ab8932416661c85c9e105ec8734380.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://actors/Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/Enemy/animations/anim_03.tres" type="SpriteFrames" id=2]
+
+[node name="Enemy_v6" instance=ExtResource( 1 )]
+hp = 2
+type = "stationary"
+INSTRUMENT = "flute"
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = ExtResource( 2 )
+animation = "idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, 11.75 )
+
+[node name="Audio" parent="." index="2"]
+position = Vector2( 0, 5 )

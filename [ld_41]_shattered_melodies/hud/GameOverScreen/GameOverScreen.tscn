@@ -5,147 +5,53 @@
 [ext_resource path="res://fonts/basis33/basis33_128.tres" type="DynamicFont" id=3]
 
 [node name="GameOverScreen" type="ColorRect"]
-
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 1 )
 color = Color( 0, 0, 0, 0.501961 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Size Flags", "Theme" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 260.0
-margin_top = 212.0
-margin_right = 764.0
-margin_bottom = 388.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 68.0
+margin_top = 92.0
+margin_right = 572.0
+margin_bottom = 268.0
 size_flags_horizontal = 5
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_right = 504.0
 margin_bottom = 128.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 5
 size_flags_vertical = 2
 custom_fonts/font = ExtResource( 3 )
 text = "GAME_OVER"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_fonts", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 132.0
 margin_right = 504.0
 margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 8
 alignment = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ButtonRestart" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonRestart" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
 margin_right = 250.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "RESTART"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ButtonQuit" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonQuit" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
 margin_left = 254.0
 margin_right = 504.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "GO_TO_MAIN_MENU"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
+text = "MAIN_MENU"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/ButtonRestart" to="." method="_on_ButtonRestart_pressed"]
-
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]
-
-

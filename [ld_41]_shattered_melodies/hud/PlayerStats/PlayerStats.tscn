@@ -1,86 +1,49 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://themes/Default/Default.theme" type="Theme" id=1]
 [ext_resource path="res://hud/PlayerStats/PlayerStats.gd" type="Script" id=2]
 [ext_resource path="res://fonts/basis33/basis33_48.tres" type="DynamicFont" id=3]
+[ext_resource path="res://hud/PlayerStats/images/enemy.png" type="Texture" id=4]
 
 [node name="PlayerStats" type="HBoxContainer"]
-
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
-anchor_bottom = 0.0
 margin_left = 12.0
 margin_top = 12.0
 margin_right = -12.0
 margin_bottom = 48.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 5
-size_flags_vertical = 1
 theme = ExtResource( 1 )
-alignment = 0
 script = ExtResource( 2 )
-_sections_unfolded = [ "Margin", "Pause", "Rect", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="HpMeter" type="HBoxContainer" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 496.0
+[node name="HpMeter" type="HBoxContainer" parent="."]
+margin_right = 290.0
 margin_bottom = 48.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Score" type="Label" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 500.0
-margin_right = 500.0
+[node name="HpMeterEnemy" type="HBoxContainer" parent="."]
+margin_left = 294.0
+margin_right = 584.0
 margin_bottom = 48.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="ScoreContainer" type="HBoxContainer" parent="."]
+margin_left = 588.0
+margin_right = 616.0
+margin_bottom = 48.0
+
+[node name="TextureRect" type="TextureRect" parent="ScoreContainer"]
+margin_right = 24.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 24, 32 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
+
+[node name="Score" type="Label" parent="ScoreContainer"]
+margin_left = 28.0
+margin_right = 28.0
+margin_bottom = 48.0
 custom_fonts/font = ExtResource( 3 )
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="HpMeterEnemy" type="HBoxContainer" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 504.0
-margin_right = 1000.0
-margin_bottom = 48.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-alignment = 2
-_sections_unfolded = [ "Size Flags" ]
-
-

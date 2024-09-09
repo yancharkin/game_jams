@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle3.png-469ba6f5badfa43b8d297b099d0398c6.stex"
+path="res://.import/idle3.png-a1834b3487593c61af08066c57976841.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/Enemy/images/anim_02/old/idle3.png"
-dest_files=[ "res://.import/idle3.png-469ba6f5badfa43b8d297b099d0398c6.stex" ]
+source_file="res://actors/Enemy/images/anim_02/idle3.png"
+dest_files=[ "res://.import/idle3.png-a1834b3487593c61af08066c57976841.stex" ]
 
 [params]
 

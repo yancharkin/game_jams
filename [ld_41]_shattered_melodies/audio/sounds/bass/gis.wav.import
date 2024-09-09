@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gis.wav-19f15747af30219c647ab28cd15f3791.sample"
+
+[deps]
+
+source_file="res://audio/sounds/bass/gis.wav"
+dest_files=[ "res://.import/gis.wav-19f15747af30219c647ab28cd15f3791.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

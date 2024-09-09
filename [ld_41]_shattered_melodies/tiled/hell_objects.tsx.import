@@ -1,0 +1,19 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/hell_objects.tsx-aa398de08fd4ea3ac36942ff5a511fa0.res"
+
+[deps]
+
+source_file="res://tiled/hell_objects.tsx"
+dest_files=[ "res://.import/hell_objects.tsx-aa398de08fd4ea3ac36942ff5a511fa0.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=true
+image_flags=3
+embed_internal_images=false
+save_tiled_properties=false
+post_import_script=""

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk_down1.png-5faf6f85ebcf3bcad0c8274fa09faf1b.stex"
+path="res://.import/walk_down1.png-4a838b6c03947733fa2a492c97bfbaaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/Enemy/images/anim_02/old/walk_down1.png"
-dest_files=[ "res://.import/walk_down1.png-5faf6f85ebcf3bcad0c8274fa09faf1b.stex" ]
+source_file="res://actors/Enemy/images/anim_02/walk_down1.png"
+dest_files=[ "res://.import/walk_down1.png-4a838b6c03947733fa2a492c97bfbaaa.stex" ]
 
 [params]
 

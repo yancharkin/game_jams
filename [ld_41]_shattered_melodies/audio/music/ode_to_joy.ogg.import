@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ode_to_joy.ogg-56fad795e8ededdeab1982faa11f2387.oggstr"
+
+[deps]
+
+source_file="res://audio/music/ode_to_joy.ogg"
+dest_files=[ "res://.import/ode_to_joy.ogg-56fad795e8ededdeab1982faa11f2387.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
