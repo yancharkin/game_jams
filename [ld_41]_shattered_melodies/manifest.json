@@ -1,0 +1,42 @@
+{
+    "name": "Shattered Melodies",
+    "short_name": "Shattered",
+    "description": "Musical educational RPG (early prototype).",
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots" : [
+        {
+            "src": "screenshots/screenshot_00.webp",
+            "sizes": "1440x900",
+            "type": "image/webp",
+            "form_factor": "wide",
+            "label": "Battle"
+        },
+        {
+            "src": "screenshots/screenshot_01.webp",
+            "sizes": "1440x900",
+            "type": "image/webp",
+            "form_factor": "narrow",
+            "label": "Battle"
+        }
+    ],
+    "categories": [
+        "games"
+    ],
+    "theme_color": "#fff",
+    "background_color": "#000",
+    "orientation": "landscape",
+    "display": "fullscreen",
+    "start_url": "/game_jams/[ld_41]_shattered_melodies",
+    "id": "/game_jams/[ld_41]_shattered_melodies"
+}
