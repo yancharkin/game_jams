@@ -83,18 +83,18 @@ function addHeaders(response) {
 }
 
 const filesList = [
-    "/",
-    "/coi-serviceworker.js",
-    "/index.apple-touch-icon.png",
-    "/index.audio.worklet.js",
-    "/index.html",
-    "/index.icon.png",
-    "/index.js",
-    "/index.pck",
-    "/index.png",
-    "/index.wasm",
-    "/icons/icon-192.png",
-    "/icons/icon-512.png",
-    "/screenshots/screenshot_00.webp",
-    "/screenshots/screenshot_01.webp"
+    "/gh-pages/[ld_41]_shattered_melodies/",
+    "/gh-pages/[ld_41]_shattered_melodies/coi-serviceworker.js",
+    "/gh-pages/[ld_41]_shattered_melodies/index.apple-touch-icon.png",
+    "/gh-pages/[ld_41]_shattered_melodies/index.audio.worklet.js",
+    "/gh-pages/[ld_41]_shattered_melodies/index.html",
+    "/gh-pages/[ld_41]_shattered_melodies/index.icon.png",
+    "/gh-pages/[ld_41]_shattered_melodies/index.js",
+    "/gh-pages/[ld_41]_shattered_melodies/index.pck",
+    "/gh-pages/[ld_41]_shattered_melodies/index.png",
+    "/gh-pages/[ld_41]_shattered_melodies/index.wasm",
+    "/gh-pages/[ld_41]_shattered_melodies/icons/icon-192.png",
+    "/gh-pages/[ld_41]_shattered_melodies/icons/icon-512.png",
+    "/gh-pages/[ld_41]_shattered_melodies/screenshots/screenshot_00.webp",
+    "/gh-pages/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp"
 ]
