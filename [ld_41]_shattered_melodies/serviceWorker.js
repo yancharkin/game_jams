@@ -83,18 +83,18 @@ function addHeaders(response) {
 }
 
 const filesList = [
-    "/game_james/[ld_41]_shattered_melodies/",
-    "/game_james/[ld_41]_shattered_melodies/coi-serviceworker.js",
-    "/game_james/[ld_41]_shattered_melodies/index.apple-touch-icon.png",
-    "/game_james/[ld_41]_shattered_melodies/index.audio.worklet.js",
-    "/game_james/[ld_41]_shattered_melodies/index.html",
-    "/game_james/[ld_41]_shattered_melodies/index.icon.png",
-    "/game_james/[ld_41]_shattered_melodies/index.js",
-    "/game_james/[ld_41]_shattered_melodies/index.pck",
-    "/game_james/[ld_41]_shattered_melodies/index.png",
-    "/game_james/[ld_41]_shattered_melodies/index.wasm",
-    "/game_james/[ld_41]_shattered_melodies/icons/icon-192.png",
-    "/game_james/[ld_41]_shattered_melodies/icons/icon-512.png",
-    "/game_james/[ld_41]_shattered_melodies/screenshots/screenshot_00.webp",
-    "/game_james/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp"
+    "/game_jams/[ld_41]_shattered_melodies/",
+    "/game_jams/[ld_41]_shattered_melodies/coi-serviceworker.js",
+    "/game_jams/[ld_41]_shattered_melodies/index.apple-touch-icon.png",
+    "/game_jams/[ld_41]_shattered_melodies/index.audio.worklet.js",
+    "/game_jams/[ld_41]_shattered_melodies/index.html",
+    "/game_jams/[ld_41]_shattered_melodies/index.icon.png",
+    "/game_jams/[ld_41]_shattered_melodies/index.js",
+    "/game_jams/[ld_41]_shattered_melodies/index.pck",
+    "/game_jams/[ld_41]_shattered_melodies/index.png",
+    "/game_jams/[ld_41]_shattered_melodies/index.wasm",
+    "/game_jams/[ld_41]_shattered_melodies/icons/icon-192.png",
+    "/game_jams/[ld_41]_shattered_melodies/icons/icon-512.png",
+    "/game_jams/[ld_41]_shattered_melodies/screenshots/screenshot_00.webp",
+    "/game_jams/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp"
 ]
