@@ -1,6 +1,6 @@
 # Game Jams
 
-Games created by me over the years during various game jams. All code written by me is licensed under the [MIT License](LICENSE). Assets are licensed under the [CC BY-SA License](LICENSE_ASSETS).
+Games created by me over the years during various game jams. All code written by me is licensed under the [MIT License](LICENSE). Assets are licensed under the [CC BY-SA License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## GameDev: The Beginning
 
