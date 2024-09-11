@@ -11,16 +11,15 @@ Try if you dare, but be prepared to face the consequences!*
 - Engine: [RPG Maker MV](https://www.rpgmakerweb.com/products/rpg-maker-mv)
 - Itch Page: https://yancharkin.itch.io/gamedev-the-beginning
 
-<figure>
-    <div>
-        <a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">
-            <p align="center">
-                <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[igmc_2017]_gamedev_the_beginning/screenshots/screenshot_01.webp" width="45%">
-            </p>
-        </a>
-    </div>
-    <figcaption><p align="center"><a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">Click to play</a></p></figcaption>
-</figure>
+<p align="center">
+    <a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[igmc_2017]_gamedev_the_beginning/screenshots/screenshot_01.webp" width="60%">
+    </a>
+    <br>
+    <a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">
+        Click to play
+    </a>
+</p>
 
 ## HP Bar
 
@@ -30,16 +29,15 @@ Try if you dare, but be prepared to face the consequences!*
 - Engine: [RPG Maker MV](https://www.rpgmakerweb.com/products/rpg-maker-mv)
 - Itch Page: https://yancharkin.itch.io/hp-bar
 
-<figure>
-    <div>
-        <a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">
-            <p align="center">
-                <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_40]_hp_bar/screenshots/screenshot_01.webp" width="45%">
-            </p>
-        </a>
-    </div>
-    <figcaption><p align="center"><a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">Click to play</a></p></figcaption>
-</figure>
+<p align="center">
+    <a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_40]_hp_bar/screenshots/screenshot_01.webp" width="60%">
+    </a>
+    <br>
+    <a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">
+        Click to play
+    </a>
+</p>
 
 ## Shattered Melodies
 
@@ -49,13 +47,12 @@ Try if you dare, but be prepared to face the consequences!*
 - Engine: [Godot (3.5.3)](https://godotengine.org)
 - Itch Page: https://yancharkin.itch.io/shattered-melodies
 
-<figure>
-    <div>
-        <a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">
-            <p align="center">
-                <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp" width="45%">
-            </p>
-        </a>
-    </div>
-    <figcaption><p align="center"><a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">Click to play</a></p></figcaption>
-</figure>
+<p align="center">
+    <a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp" width="60%">
+    </a>
+    <br>
+    <a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">
+        Click to play
+    </a>
+</p>
