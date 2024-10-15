@@ -1,0 +1,355 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 213,
+    "major": 5,
+    "minor": 4,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "antialiasingMode": "none",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": true,
+    "orientation": "landscape",
+    "packageName": "com.yancharkin.twistedpairs",
+    "pixelsRounding": true,
+    "projectUuid": "800a6e98-36ed-4eb1-947b-21a22372bdfa",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "useExternalSourceFiles": false,
+    "version": "0.9.9",
+    "name": "Twisted Pairs",
+    "description": "",
+    "author": "",
+    "windowWidth": 432,
+    "windowHeight": 240,
+    "latestCompilationDirectory": "/home/user/twisted_pairs_html",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 1980969,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "assets/images/loading_screen.png",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0,
+      "minDuration": 2,
+      "progressBarColor": 9019991,
+      "progressBarHeight": 8,
+      "progressBarMaxWidth": 240,
+      "progressBarMinWidth": 32,
+      "progressBarWidthPercent": 100,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": false
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/background.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/09.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/ammo8/overlay.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/ammo8/overlay.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/spawner.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/spawner.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/dead0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/dead0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/dead1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/dead1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/dead2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/dead2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/you_win.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/you_win.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/you_lose.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/you_lose.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/kill.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/kill.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/click.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/click.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/loading_screen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/loading_screen.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/music.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/music.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/lets_do_it.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/lets_do_it.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/okey-dokey.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/okey-dokey.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/ok.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets/audio/ok.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/mainscene"
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
