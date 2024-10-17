@@ -3290,11 +3290,12 @@
         },
         {
           "type": {
-            "value": "PlaySound"
+            "value": "PlaySoundCanal"
           },
           "parameters": [
             "",
             "assets/audio/music.wav",
+            "0",
             "yes",
             "40",
             "0.4"
@@ -3345,6 +3346,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Cards Interaction",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3569,7 +3571,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Start/Restart Game/Round",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3997,6 +3998,17 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModPitchSoundChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "0",
+                    "=",
+                    "0.4"
+                  ]
                 }
               ]
             }
@@ -4006,12 +4018,12 @@
       "parameters": []
     },
     {
-      "colorB": 228,
-      "colorG": 176,
+      "colorB": 74,
+      "colorG": 74,
       "colorR": 74,
       "creationTime": 0,
       "folded": true,
-      "name": "Sound",
+      "name": "Mute Sound",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -4180,6 +4192,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Color Schemes",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5069,7 +5082,6 @@
       "colorG": 16,
       "colorR": 189,
       "creationTime": 0,
-      "folded": true,
       "name": "Win-Lose Conditions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5203,6 +5215,17 @@
                 "",
                 "",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModPitchSoundChannel"
+              },
+              "parameters": [
+                "",
+                "0",
+                "+",
+                "0.05"
               ]
             }
           ]
