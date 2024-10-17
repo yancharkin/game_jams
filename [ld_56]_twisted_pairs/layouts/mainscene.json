@@ -119,6 +119,12 @@
       "name": "startSound",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "touchId",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -2074,16 +2080,6 @@
                 "=",
                 "0"
               ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "gameIsRunning",
-                "True",
-                ""
-              ]
             }
           ],
           "actions": [
@@ -2256,36 +2252,69 @@
                 "=",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "startRound",
-                "True",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HasAnyTouchOrMouseStarted"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "touchId",
+                    "=",
+                    "StartedTouchOrMouseId(0)"
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "gameIsRunning",
-                "True",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HasTouchEnded"
+                  },
+                  "parameters": [
+                    "",
+                    "Variable(touchId)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "startRound",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "gameIsRunning",
+                    "True",
+                    ""
+                  ]
+                }
               ]
             }
           ]
