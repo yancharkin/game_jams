@@ -66,114 +66,6 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/images/ammo8/background.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/background.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/00.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/00.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/01.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/01.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/02.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/02.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/03.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/03.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/04.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/04.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/05.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/05.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/06.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/06.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/07.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/07.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/08.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/08.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/09.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/09.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/ammo8/overlay.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/ammo8/overlay.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/images/cockroach/cockroach0.png",
         "kind": "image",
         "metadata": "",
@@ -331,6 +223,366 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/background.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/03.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/04.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/09.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/09.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/06.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/09.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/sound_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/sound_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/sound_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/sound_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/sound_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/sound_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/sound_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/sound_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/sound_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/sound_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/sound_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/sound_off.png",
+        "smoothed": false,
         "userAdded": true
       }
     ],
