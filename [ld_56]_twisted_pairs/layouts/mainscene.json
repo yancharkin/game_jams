@@ -11,14 +11,14 @@
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 16,
+    "gridWidth": 8,
     "gridHeight": 8,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 2.7546296296296444,
+    "zoomFactor": 1.789878148144862,
     "windowMask": false
   },
   "objectsGroups": [
@@ -67,6 +67,17 @@
         },
         {
           "name": "Message"
+        }
+      ]
+    },
+    {
+      "name": "Highlights",
+      "objects": [
+        {
+          "name": "highlight0"
+        },
+        {
+          "name": "highlight1"
         }
       ]
     }
@@ -177,6 +188,18 @@
       "name": "settingsApplied",
       "type": "boolean",
       "value": false
+    },
+    {
+      "folded": true,
+      "name": "viewportWidth",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "test",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -192,7 +215,7 @@
       "width": 432,
       "x": 0,
       "y": 0,
-      "zOrder": 1,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -867,6 +890,40 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 8,
+      "keepRatio": true,
+      "layer": "",
+      "name": "highlight0",
+      "persistentUuid": "f983abba-9c79-4584-b7fe-8993aa5f5edc",
+      "width": 8,
+      "x": 24,
+      "y": 24,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 8,
+      "keepRatio": true,
+      "layer": "",
+      "name": "highlight1",
+      "persistentUuid": "49e431aa-9e55-4034-ae2f-944ea0ddfbdb",
+      "width": 8,
+      "x": 24,
+      "y": 24,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -911,21 +968,16 @@
           "name": "clicked",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "x",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior",
-          "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 0,
-          "topEdgeAnchor": 0,
-          "useLegacyBottomAndRightAnchors": false
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "",
@@ -3163,6 +3215,28 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 8,
+      "name": "highlight0",
+      "texture": "assets/images/highlight.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 8,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 8,
+      "name": "highlight1",
+      "texture": "assets/images/highlight.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 8,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -3224,6 +3298,12 @@
       },
       {
         "objectName": "cockroach"
+      },
+      {
+        "objectName": "highlight0"
+      },
+      {
+        "objectName": "highlight1"
       }
     ]
   },
@@ -3275,6 +3355,25 @@
           },
           "parameters": [
             "card"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Highlights"
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "Highlights",
+            "Opacity",
+            "=",
+            "128"
           ]
         },
         {
@@ -3364,6 +3463,16 @@
           "parameters": [
             "",
             "\"settingsTimer\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "viewportWidth",
+            "=",
+            "SceneWindowWidth()"
           ]
         }
       ],
@@ -3757,6 +3866,32 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "roundN",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"shiftsTimer\""
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3971,14 +4106,43 @@
                   "type": "BuiltinCommonInstructions::JsCode",
                   "inlineCode": [
                     "const cards = runtimeScene.getObjects(\"card\");",
-                    "cards.forEach(card => {",
+                    "const widthDiff = (432 - runtimeScene.getViewportWidth())/2;",
+                    "const positions = [32, 96, 160, 224, 288, 352];",
+                    "const rows = [",
+                    "    [0, 1, 2, 3, 4, 5],",
+                    "    [6, 7, 8, 9, 10, 11],",
+                    "    [12, 13, 14, 15, 16, 17]",
+                    "];",
+                    "const columns = [",
+                    "    [0, 6, 12],",
+                    "    [1, 7, 13],",
+                    "    [2, 8, 14],",
+                    "    [3, 9, 15],",
+                    "    [4, 10, 16],",
+                    "    [5, 11, 17]",
+                    "];",
+                    "",
+                    "for (let card of cards) {",
                     "    card.getVariables().get(\"visible\").setValue(false);",
                     "    card.getVariables().get(\"clicked\").setValue(false);",
-                    "});"
+                    "",
+                    "    let cardId = card.getVariables().get(\"id\").getValue();",
+                    "    for (let i = 0; i < 3; i++) {",
+                    "        if (rows[i].includes(cardId)) {",
+                    "            card.setY(positions[i]);",
+                    "        };",
+                    "    };    ",
+                    "    for (let j = 0; j < 6; j++) {",
+                    "        if (columns[j].includes(cardId)) {",
+                    "            card.setX(positions[j] - widthDiff);",
+                    "            card.getVariables().get(\"x\").setValue(positions[j]);",
+                    "        };",
+                    "    };",
+                    "};"
                   ],
                   "parameterObjects": "",
                   "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "eventsSheetExpanded": true
                 }
               ],
               "parameters": []
@@ -4020,11 +4184,11 @@
                     "}",
                     "for (let card of cards) {",
                     "    card.getVariables().get(\"imageN\").setValue(setUniqueCard());",
-                    "}"
+                    "};"
                   ],
                   "parameterObjects": "",
                   "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "eventsSheetExpanded": true
                 }
               ],
               "parameters": []
@@ -4460,6 +4624,15 @@
                     "UI Text",
                     "\"238;255;204\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::SetColor"
+                  },
+                  "parameters": [
+                    "Highlights",
+                    "\"238;255;204\""
+                  ]
                 }
               ]
             },
@@ -4505,6 +4678,15 @@
                     "UI Text",
                     "\"181;158;144\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::SetColor"
+                  },
+                  "parameters": [
+                    "Highlights",
+                    "\"181;158;144\""
+                  ]
                 }
               ]
             },
@@ -4548,6 +4730,15 @@
                   },
                   "parameters": [
                     "UI Text",
+                    "\"221;221;221\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::SetColor"
+                  },
+                  "parameters": [
+                    "Highlights",
                     "\"221;221;221\""
                   ]
                 }
@@ -5647,9 +5838,258 @@
       "parameters": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Shifts",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"shiftsTimer\"",
+                ">=",
+                "roundTime/3"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "colorB": 35,
+              "colorG": 166,
+              "colorR": 245,
+              "creationTime": 0,
+              "folded": true,
+              "name": "JS Shifts",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "function randi(min, max) {",
+                    "    const minCeiled = Math.ceil(min);",
+                    "    const maxFloored = Math.floor(max);",
+                    "    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);",
+                    "};",
+                    "",
+                    "const highlight0 = runtimeScene.getObjects(\"highlight0\")[0];",
+                    "const highlight1 = runtimeScene.getObjects(\"highlight1\")[0];",
+                    "const cards = runtimeScene.getObjects(\"card\");",
+                    "const widthDiff = (432 - runtimeScene.getViewportWidth())/2;",
+                    "const positions = [24, 88, 152, 216, 280, 344];",
+                    "const rows = [",
+                    "    [0, 1, 2, 3, 4, 5],",
+                    "    [6, 7, 8, 9, 10, 11],",
+                    "    [12, 13, 14, 15, 16, 17]",
+                    "];",
+                    "const columns = [",
+                    "    [0, 6, 12],",
+                    "    [1, 7, 13],",
+                    "    [2, 8, 14],",
+                    "    [3, 9, 15],",
+                    "    [4, 10, 16],",
+                    "    [5, 11, 17]",
+                    "];",
+                    "",
+                    "var row0;",
+                    "var row1;",
+                    "var column0;",
+                    "var column1;",
+                    "",
+                    "var w = 384;",
+                    "var h = 64;",
+                    "var x = 24;",
+                    "var x2 = x;",
+                    "row0 = randi(0, 3);",
+                    "var y = positions[row0];",
+                    "var y2 = y;",
+                    "while (y2 == y) {",
+                    "    row1 = randi(0, 3);",
+                    "    y2 = positions[row1];",
+                    "};",
+                    "",
+                    "var orientation = randi(0, 2);",
+                    "",
+                    "if (orientation == 1) {",
+                    "    w = 64;",
+                    "    h = 192;",
+                    "    y = 24;",
+                    "    y2 = y;",
+                    "    column0 = randi(0, 6);",
+                    "    x = positions[column0];",
+                    "    x2 = x;",
+                    "    while (x2 == x) {",
+                    "        column1 = randi(0, 6);",
+                    "        x2 = positions[column1];",
+                    "    };",
+                    "};",
+                    "",
+                    "highlight0.setSize(w, h);",
+                    "highlight1.setSize(w, h);",
+                    "highlight0.setPosition(x - widthDiff, y);",
+                    "highlight1.setPosition(x2 - widthDiff, y2)",
+                    "",
+                    "if (orientation == 0) {",
+                    "    for (let card of cards) {",
+                    "        let cardId = card.getVariables().get(\"id\").getValue();",
+                    "        if (rows[row0].includes(cardId)) {",
+                    "            card.setY(y2 + 8);",
+                    "        };",
+                    "        if (rows[row1].includes(cardId)) {",
+                    "            card.setY(y + 8);",
+                    "        };",
+                    "    };",
+                    "};",
+                    "if (orientation == 1) {",
+                    "    for (let card of cards) {",
+                    "        let cardId = card.getVariables().get(\"id\").getValue();",
+                    "        if (columns[column0].includes(cardId)) {",
+                    "            card.setX(positions[column1] + 8 - widthDiff);",
+                    "            card.getVariables().get(\"x\").setValue(positions[column1] + 8);",
+                    "        };",
+                    "        if (columns[column1].includes(cardId)) {",
+                    "            card.setX(positions[column0] + 8 - widthDiff);",
+                    "            card.getVariables().get(\"x\").setValue(positions[column0] + 8);",
+                    "        };",
+                    "    };",
+                    "};"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Highlights",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Highlights",
+                    "\"highlightsVisibility\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareObjectTimer"
+              },
+              "parameters": [
+                "Highlights",
+                "\"highlightsVisibility\"",
+                ">=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Highlights"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "viewportWidth",
+            "!=",
+            "SceneWindowWidth()"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "viewportWidth",
+            "=",
+            "SceneWindowWidth()"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Reposition card when viewport size changed.\nAnchors can't be used because card have to change positions sometimes.\n"
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const cards = runtimeScene.getObjects(\"card\");",
+            "const widthDiff = (432 - runtimeScene.getViewportWidth())/2;",
+            "",
+            "for (let card of cards) {",
+            "    let curPos = card.getVariables().get(\"x\").getValue();",
+            "    let newPos = curPos - widthDiff;",
+            "    card.setX(newPos);",
+            "};"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ]
     }
   ],
   "layers": [

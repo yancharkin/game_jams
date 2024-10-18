@@ -584,6 +584,15 @@
         "name": "assets/images/color_schemes/aurora/aurora.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/highlight.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/highlight.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
