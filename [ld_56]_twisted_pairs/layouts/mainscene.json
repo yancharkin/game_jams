@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.789878148144862,
+    "zoomFactor": 1.6750097941115107,
     "windowMask": false
   },
   "objectsGroups": [
@@ -47,6 +47,9 @@
         },
         {
           "name": "Scheme"
+        },
+        {
+          "name": "Fullscreen"
         }
       ]
     },
@@ -192,12 +195,6 @@
     {
       "folded": true,
       "name": "viewportWidth",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "test",
       "type": "number",
       "value": 0
     }
@@ -658,8 +655,8 @@
       "name": "Timer",
       "persistentUuid": "263ab888-5ed8-4450-8c45-1a1e4385cf00",
       "width": 0,
-      "x": 96,
-      "y": 216,
+      "x": 72,
+      "y": 8,
       "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
@@ -674,8 +671,8 @@
       "name": "TimerLabel",
       "persistentUuid": "039f70da-10be-410d-85b8-ed0f5f470884",
       "width": 0,
-      "x": 32,
-      "y": 216,
+      "x": 8,
+      "y": 8,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -690,8 +687,8 @@
       "name": "RoundLabel",
       "persistentUuid": "4f47ac6d-aae8-4b70-9010-47e5b1a51bd5",
       "width": 0,
-      "x": 338,
-      "y": 216,
+      "x": 362,
+      "y": 8,
       "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
@@ -706,8 +703,8 @@
       "name": "Round",
       "persistentUuid": "c1783d19-f034-4886-aeba-5df98911eb4f",
       "width": 0,
-      "x": 392,
-      "y": 216,
+      "x": 416,
+      "y": 8,
       "zOrder": 9,
       "numberProperties": [],
       "stringProperties": [],
@@ -868,8 +865,8 @@
       "name": "Sound",
       "persistentUuid": "005096ba-8a76-40f6-b2a5-751032cef9fb",
       "width": 0,
-      "x": 32,
-      "y": 8,
+      "x": 8,
+      "y": 216,
       "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
@@ -884,8 +881,8 @@
       "name": "Scheme",
       "persistentUuid": "d5d38b88-b0dd-4d4a-b0d1-4f8424421bab",
       "width": 0,
-      "x": 384,
-      "y": 8,
+      "x": 208,
+      "y": 216,
       "zOrder": 16,
       "numberProperties": [],
       "stringProperties": [],
@@ -921,6 +918,22 @@
       "x": 24,
       "y": 24,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "Fullscreen",
+      "persistentUuid": "b057d4e2-77fa-41c9-ba0d-441f71699217",
+      "width": 0,
+      "x": 408,
+      "y": 216,
+      "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -2120,10 +2133,10 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 1,
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
@@ -2172,10 +2185,10 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 1,
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
@@ -2224,12 +2237,12 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 0,
           "name": "Anchor",
+          "rightEdgeAnchor": 2,
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
           "useLegacyBottomAndRightAnchors": false
         }
@@ -2276,12 +2289,12 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 0,
           "name": "Anchor",
+          "rightEdgeAnchor": 2,
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
           "useLegacyBottomAndRightAnchors": false
         }
@@ -2777,10 +2790,10 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 1,
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
@@ -3059,12 +3072,12 @@
       "effects": [],
       "behaviors": [
         {
+          "leftEdgeAnchor": 4,
           "name": "Anchor",
+          "rightEdgeAnchor": 0,
           "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
           "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
           "useLegacyBottomAndRightAnchors": false
         }
@@ -3237,6 +3250,288 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Fullscreen",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "state",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 0,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 0,
+          "type": "AnchorBehavior::AnchorBehavior",
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/ammo8/fullscreen_on.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/ammo8/fullscreen_off.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/bastille/fullscreen_on.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/bastille/fullscreen_off.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/aurora/fullscreen_on.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/color_schemes/aurora/fullscreen_off.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 2
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3250,6 +3545,9 @@
           },
           {
             "objectName": "Scheme"
+          },
+          {
+            "objectName": "Fullscreen"
           },
           {
             "objectName": "Message"
@@ -3473,6 +3771,25 @@
             "viewportWidth",
             "=",
             "SceneWindowWidth()"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+          },
+          "parameters": [
+            "Fullscreen",
+            "Animation"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangeSprite"
+          },
+          "parameters": [
+            "Fullscreen",
+            "=",
+            "1"
           ]
         }
       ],
@@ -4504,16 +4821,6 @@
                 },
                 {
                   "type": {
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "Sound",
-                    "=",
-                    "Sound.state"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -4530,6 +4837,16 @@
                     "\"settings\"",
                     "\"colorScheme\"",
                     "colorScheme"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "Fullscreen",
+                    "=",
+                    "Fullscreen.state"
                   ]
                 }
               ]
@@ -4618,19 +4935,19 @@
                 },
                 {
                   "type": {
-                    "value": "TextObject::ChangeColor"
+                    "value": "TiledSpriteObject::SetColor"
                   },
                   "parameters": [
-                    "UI Text",
+                    "Highlights",
                     "\"238;255;204\""
                   ]
                 },
                 {
                   "type": {
-                    "value": "TiledSpriteObject::SetColor"
+                    "value": "TextObject::ChangeColor"
                   },
                   "parameters": [
-                    "Highlights",
+                    "UI Text",
                     "\"238;255;204\""
                   ]
                 }
@@ -4866,6 +5183,82 @@
                 "",
                 "\"settingsTimer\""
               ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 74,
+      "colorG": 74,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Fullscreen",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "gameIsRunning",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Fullscreen",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const fullscreenButton = objects[0];",
+                "const canvas = document.getElementsByTagName(\"canvas\")[0];",
+                "if (document.fullscreenElement) {",
+                "    document.exitFullscreen();",
+                "    fullscreenButton.setAnimationFrame(0)",
+                "    fullscreenButton.getVariables().get(\"state\").setValue(0);",
+                "} else {   ",
+                "    canvas.requestFullscreen();",
+                "    fullscreenButton.setAnimationFrame(1)",
+                "    fullscreenButton.getVariables().get(\"state\").setValue(1);",
+                "};"
+              ],
+              "parameterObjects": "Fullscreen",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             }
           ]
         }

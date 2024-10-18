@@ -593,6 +593,60 @@
         "name": "assets/images/highlight.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/fullscreen_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/fullscreen_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/fullscreen_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/fullscreen_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/fullscreen_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/fullscreen_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/fullscreen_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/fullscreen_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/fullscreen_on.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/fullscreen_on.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/fullscreen_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/fullscreen_off.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
