@@ -524,33 +524,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/images/color_schemes/ammo8.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/color_schemes/ammo8.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/color_schemes/bastille.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/color_schemes/bastille.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/color_schemes/aurora.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/color_schemes/aurora.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/images/color_schemes/ammo8/sound_off.png",
         "kind": "image",
         "metadata": "",
@@ -582,6 +555,33 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/images/color_schemes/bastille/sound_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/ammo8/ammo8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/ammo8/ammo8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/bastille/bastille.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/bastille/bastille.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/color_schemes/aurora/aurora.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/color_schemes/aurora/aurora.png",
         "smoothed": false,
         "userAdded": true
       }

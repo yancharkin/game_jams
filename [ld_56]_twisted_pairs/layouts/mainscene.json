@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 3.0427928518462592,
+    "zoomFactor": 2.7546296296296444,
     "windowMask": false
   },
   "objectsGroups": [
@@ -159,6 +159,24 @@
       "name": "touchId",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "soundOn",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "folded": true,
+      "name": "colorScheme",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "settingsApplied",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -2989,13 +3007,13 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
           "leftEdgeAnchor": 4,
-          "name": "Anchor",
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
-          "type": "AnchorBehavior::AnchorBehavior",
           "useLegacyBottomAndRightAnchors": false
         }
       ],
@@ -3010,7 +3028,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/images/color_schemes/ammo8.png",
+                  "image": "assets/images/color_schemes/ammo8/ammo8.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3058,7 +3076,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/images/color_schemes/bastille.png",
+                  "image": "assets/images/color_schemes/bastille/bastille.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3106,7 +3124,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/images/color_schemes/aurora.png",
+                  "image": "assets/images/color_schemes/aurora/aurora.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3337,6 +3355,93 @@
             "Scheme",
             "=",
             "Scheme.N"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"settingsTimer\""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"settings\"",
+                "\"soundOn\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"settings\"",
+                "\"soundOn\"",
+                "",
+                "soundOn"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Sound",
+                "state",
+                "=",
+                "soundOn"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"settings\"",
+                "\"colorScheme\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"settings\"",
+                "\"colorScheme\"",
+                "",
+                "colorScheme"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Scheme",
+                "N",
+                "=",
+                "colorScheme"
+              ]
+            }
           ]
         }
       ]
@@ -3571,6 +3676,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Start/Restart Game/Round",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4018,12 +4124,12 @@
       "parameters": []
     },
     {
-      "colorB": 74,
-      "colorG": 74,
-      "colorR": 74,
+      "colorB": 27,
+      "colorG": 2,
+      "colorR": 208,
       "creationTime": 0,
       "folded": true,
-      "name": "Mute Sound",
+      "name": "Apply Settings",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -4035,80 +4141,25 @@
                 "value": "BooleanVariable"
               },
               "parameters": [
-                "gameIsRunning",
-                "True",
+                "settingsApplied",
+                "=",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Sound",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Sound",
-                "state",
-                "+",
-                "1"
               ]
             }
           ],
+          "actions": [],
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Sound",
-                    "state",
-                    ">",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Sound",
-                    "state",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 134,
+                "g": 233,
+                "r": 184,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Sound"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -4168,6 +4219,35 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Sound",
+                    "state",
+                    ">",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Sound",
+                    "state",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
@@ -4179,78 +4259,41 @@
                     "=",
                     "Sound.state"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "soundOn",
+                    "=",
+                    "Sound.state"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"settings\"",
+                    "\"soundOn\"",
+                    "soundOn"
+                  ]
                 }
               ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "folded": true,
-      "name": "Color Schemes",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "gameIsRunning",
-                "True",
-                ""
-              ]
             },
             {
-              "type": {
-                "value": "SourisSurObjet"
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 134,
+                "g": 233,
+                "r": 184,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
               },
-              "parameters": [
-                "Scheme",
-                "",
-                "",
-                ""
-              ]
+              "comment": "Color Scheme"
             },
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Scheme",
-                "N",
-                "+",
-                "1"
-              ]
-            }
-          ],
-          "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -4303,6 +4346,26 @@
                     "Sound",
                     "=",
                     "Sound.state"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "colorScheme",
+                    "=",
+                    "Scheme.N"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"settings\"",
+                    "\"colorScheme\"",
+                    "colorScheme"
                   ]
                 }
               ]
@@ -4488,6 +4551,215 @@
                     "\"221;221;221\""
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"settingsTimer\"",
+                ">",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "settingsApplied",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"settingsTimer\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 74,
+      "colorG": 74,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Mute Sound",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "gameIsRunning",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Sound",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Sound",
+                "state",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "settingsApplied",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"settingsTimer\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Color Schemes",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "gameIsRunning",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Scheme",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Scheme",
+                "N",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "settingsApplied",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"settingsTimer\""
               ]
             }
           ]
@@ -5082,6 +5354,7 @@
       "colorG": 16,
       "colorR": 189,
       "creationTime": 0,
+      "folded": true,
       "name": "Win-Lose Conditions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5372,6 +5645,11 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
