@@ -13,7 +13,7 @@ Try if you dare, but be prepared to face the consequences!*
 
 <p align="center">
     <a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">
-        <img src="[igmc_2017]_gamedev_the_beginning/screenshots/screenshot_01.webp" width="60%">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[igmc_2017]_gamedev_the_beginning/screenshots/screenshot_01.webp" width="60%">
     </a>
     <br>
     <a href="https://yancharkin.github.io/game_jams/[igmc_2017]_gamedev_the_beginning/">
@@ -31,7 +31,7 @@ Try if you dare, but be prepared to face the consequences!*
 
 <p align="center">
     <a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">
-        <img src="[ld_40]_hp_bar/screenshots/screenshot_01.webp" width="60%">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_40]_hp_bar/screenshots/screenshot_01.webp" width="60%">
     </a>
     <br>
     <a href="https://yancharkin.github.io/game_jams/[ld_40]_hp_bar/">
@@ -49,7 +49,7 @@ Try if you dare, but be prepared to face the consequences!*
 
 <p align="center">
     <a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">
-        <img src="[ld_41]_shattered_melodies/screenshots/screenshot_01.webp" width="60%">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_41]_shattered_melodies/screenshots/screenshot_01.webp" width="60%">
     </a>
     <br>
     <a href="https://yancharkin.github.io/game_jams/[ld_41]_shattered_melodies/">
@@ -67,7 +67,7 @@ Try if you dare, but be prepared to face the consequences!*
 
 <p align="center">
     <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
-        <img src="[ld_56]_twisted_pairs/screenshots/screenshot_01.webp" width="60%">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_56]_twisted_pairs/screenshots/screenshot_01.webp" width="60%">
     </a>
     <br>
     <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
