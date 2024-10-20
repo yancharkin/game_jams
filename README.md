@@ -67,7 +67,7 @@ Try if you dare, but be prepared to face the consequences!*
 
 <p align="center">
     <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
-        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_56]_twisted_pairs/screenshots/screenshot_01.webp" width="60%">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_56]_twisted_pairs/screenshots/screenshot_00.webp" width="60%">
     </a>
     <br>
     <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
