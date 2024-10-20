@@ -56,3 +56,21 @@ Try if you dare, but be prepared to face the consequences!*
         Click to play
     </a>
 </p>
+
+## Twisted Pairs
+
+*Match Pairs game but with a twist!*
+
+- Game Jam: [Ludum Dare 56](https://ldjam.com/events/ludum-dare/56/twisted-pairs)
+- Engine: [GDevelop (5.4.213)](https://gdevelop.io/)
+- Itch Page: https://yancharkin.itch.io/twisted-pairs
+
+<p align="center">
+    <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
+        <img src="https://raw.githubusercontent.com/yancharkin/game_jams/gh-pages/[ld_56]_twisted_pairs/screenshots/screenshot_01.webp" width="60%">
+    </a>
+    <br>
+    <a href="https://yancharkin.github.io/game_jams/[ld_56]_twisted_pairs/">
+        Click to play
+    </a>
+</p>
