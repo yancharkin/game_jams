@@ -1,0 +1,97 @@
+{
+    "name": "twisted-pairs",
+    "displayName": "Twisted Pairs",
+    "version": "0.9.9",
+    "description": "Match Pairs game but with a twist!",
+    "repository": "https://github.com/yancharkin/game_jams/tree/main/[ld_56]_twisted_pairs",
+    "main": "www/index.html",
+    "author": "Ivan Yancharkin",
+    "license": "MIT",
+    "private": true,
+    "devDependencies": {
+        "cordova": "^12.0.0",
+        "cordova-android": "^13.0.0",
+        "electron": "33.0.1",
+        "electron-builder": "25.1.8"
+    },
+    "build": {
+        "appId": "com.github.yancharkin.${name}",
+        "productName": "Twisted Pairs",
+        "artifactName": "${name}-${os}-${arch}.${ext}",
+        "directories": {
+            "buildResources": "res/icon/"
+        },
+        "mac": {
+            "category": "public.app-category.games",
+            "target": [
+                {
+                    "target": "zip",
+                    "arch": [
+                        "arm64",
+                        "x64"
+                    ]
+                }
+            ]
+        },
+        "linux": {
+            "executableName": "twisted-pairs",
+            "icon": "linux",
+            "category": "Games",
+            "target": [
+                {
+                    "target": "AppImage",
+                    "arch": [
+                        "x64",
+                        "armv7l",
+                        "arm64"
+                    ]
+                },
+                {
+                    "target": "deb",
+                    "arch": [
+                        "x64",
+                        "armv7l",
+                        "arm64"
+                    ]
+                }
+            ]
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "zip",
+                    "arch": [
+                        "x64",
+                        "ia32"
+                    ]
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "start": "yarn copy-files && cd ./www && python -m http.server & google-chrome-stable --incognito --start-fullscreen --auto-open-devtools-for-tabs --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' http://localhost:8000/",
+        "build": "yarn pwa-off && yarn copy-files && touch ./www/yarn.lock",
+        "build-pwa": "yarn pwa-on && yarn copy-files && ./src/pwa/updateSwFilesList.sh ./www '/game_jams/[ld_56]_twisted_pairs'",
+        "build-android-debug": "yarn build && cordova build android && mkdir -p dist/android && cp platforms/android/app/build/outputs/apk/debug/app-debug.apk dist/android/twisted-pairs_android_debug.apk",
+        "build-android-release": "yarn build && cordova build android --release --buildConfig='../../../cordovaBuildConfig.json' && mkdir -p dist/android && cp platforms/android/app/build/outputs/apk/release/app-release.apk dist/android/twisted-pairs_android.apk",
+        "build-linux-appimage": "yarn build && electron-builder -l AppImage --x64 --armv7l --arm64",
+        "build-linux-deb": "yarn build && electron-builder -l deb --x64 --armv7l --arm64",
+        "build-linux-all": "yarn build && electron-builder -l",
+        "build-macos": "yarn build && electron-builder -m",
+        "build-win": "yarn build && electron-builder -w",
+        "build-desktop-most": "yarn build-linux-appimage && yarn build-macos && yarn build-win",
+        "build-most": "yarn build-desktop-most && yarn build-android-release && yarn build-pwa",
+        "build-all": "yarn build-linux-all && yarn build-macos && yarn-build-win && yarn build-android-release && yarn build-pwa",
+        "remove-www": "[ -d ./www ] && rm -r ./www || :",
+        "copy-files": "yarn remove-www && mkdir -p ./www && cp -r ./src/gdevelop/* ./www/ && cp ./src/pwa/manifest.json ./www/ && cp ./src/pwa/serviceWorker.js ./www/ && cp -r ./screenshots ./www/ && cp ./src/electron/* ./www/",
+        "pwa-check": "cat ./src/gdevelop/index.html | tr '\n' 'F' | grep '<!--F    <link rel=\"manifest\"' > /dev/null",
+        "pwa-on": "yarn pwa-check && sed -i.bak -z -e 's/<!--\\n    <link/<link/ ; s/manifest.json\">\\n    -->/manifest.json\">/ ; s/<!--\\n    <script>\\n/<script>\\n/ ; s/<\\/script>\\n    -->/<\\/script>/' ./src/gdevelop/index.html || :",
+        "pwa-off": "yarn pwa-check || sed -i.bak -z -e 's/<link rel=\"manifest/<!--\\n    <link rel=\"manifest/ ; s/manifest.json\">/manifest.json\">\\n    -->/ ; s/    <script>\\n        if (\"serviceWorker\" /    <!--\\n    <script>\\n        if (\"serviceWorker\" /' -e  's/        \\}\\n    <\\/script>\\n/        \\}\\n    <\\/script>\\n    -->\\n/' ./src/gdevelop/index.html",
+        "pwa-toggle": "yarn pwa-check && yarn pwa-on || yarn pwa-off"
+    },
+    "cordova": {
+        "platforms": [
+            "android"
+        ]
+    }
+}

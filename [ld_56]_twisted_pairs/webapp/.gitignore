@@ -1,0 +1,6 @@
+dist
+platforms
+www
+.yarn
+*.swp
+*.bak
