@@ -11,14 +11,14 @@
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 8,
-    "gridHeight": 8,
+    "gridWidth": 24,
+    "gridHeight": 24,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.6750097941115107,
+    "zoomFactor": 1.567513304342778,
     "windowMask": false
   },
   "objectsGroups": [
@@ -708,14 +708,15 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 16,
       "keepRatio": true,
       "layer": "HUD",
       "name": "Round",
       "persistentUuid": "c1783d19-f034-4886-aeba-5df98911eb4f",
-      "width": 0,
-      "x": 416,
+      "width": 16,
+      "x": 408,
       "y": 8,
       "zOrder": 9,
       "numberProperties": [],
@@ -2313,7 +2314,7 @@
       ],
       "string": "1",
       "font": "",
-      "textAlignment": "left",
+      "textAlignment": "right",
       "characterSize": 14,
       "color": {
         "b": 204,
@@ -2336,7 +2337,7 @@
         "underlined": false,
         "text": "1",
         "font": "",
-        "textAlignment": "left",
+        "textAlignment": "right",
         "characterSize": 14,
         "color": "238;255;204"
       }
@@ -3978,7 +3979,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Cards Interaction",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4730,7 +4730,6 @@
       "colorG": 2,
       "colorR": 208,
       "creationTime": 0,
-      "folded": true,
       "name": "Apply Settings",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5229,7 +5228,6 @@
       "colorG": 74,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Mute Sound",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6310,6 +6308,16 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
+                "lostRound",
+                "=",
+                "roundN"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
                 "roundN",
                 "=",
                 "1"
@@ -6363,6 +6371,23 @@
                 "",
                 "",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Leaderboard\""
+                  ]
+                }
               ]
             }
           ]

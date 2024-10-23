@@ -21,15 +21,44 @@
     "useExternalSourceFiles": false,
     "version": "0.9.9",
     "name": "Twisted Pairs",
-    "description": "",
-    "author": "",
+    "description": "Match Pairs game but with a twist!",
+    "author": "yancharkin",
     "windowWidth": 432,
     "windowHeight": 240,
     "latestCompilationDirectory": "/home/user/twisted_pairs_html",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": "",
+      "liluo-thumbnail": "assets/images/gdgames_thumbnail.png"
+    },
     "loadingScreen": {
       "backgroundColor": 1980969,
       "backgroundFadeInDuration": 0.2,
@@ -50,10 +79,21 @@
       "placement": "bottom-left",
       "showWatermark": false
     },
-    "authorIds": [],
-    "authorUsernames": [],
-    "categories": [],
-    "playableDevices": [],
+    "authorIds": [
+      "tyEDT1GvivbaKhuJ5DX0TXAG8sy2"
+    ],
+    "authorUsernames": [
+      "yancharkin"
+    ],
+    "categories": [
+      "mini-games",
+      "puzzle",
+      "horror"
+    ],
+    "playableDevices": [
+      "keyboard",
+      "mobile"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -647,6 +687,33 @@
         "name": "assets/images/color_schemes/bastille/fullscreen_off.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/enter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/enter.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "../../../../../gdgames_thumbnail.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "../../../../../gdgames_thumbnail.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/gdgames_thumbnail.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/gdgames_thumbnail.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -656,11 +723,22 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "lostRound",
+      "type": "number",
+      "value": 1
+    }
+  ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/mainscene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/leaderboard"
     }
   ],
   "externalEvents": [],
