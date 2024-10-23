@@ -5,7 +5,7 @@
   "name": "MainScene",
   "r": 209,
   "standardSortMethod": true,
-  "stopSoundsOnStartup": true,
+  "stopSoundsOnStartup": false,
   "title": "Twisted Pairs",
   "v": 209,
   "uiSettings": {
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.567513304342778,
+    "zoomFactor": 1.7898781481448622,
     "windowMask": false
   },
   "objectsGroups": [
@@ -2188,6 +2188,7 @@
         "text": "50",
         "font": "",
         "textAlignment": "left",
+        "verticalTextAlignment": "top",
         "characterSize": 14,
         "color": "238;255;204"
       }
@@ -2240,6 +2241,7 @@
         "text": "Time left:",
         "font": "",
         "textAlignment": "left",
+        "verticalTextAlignment": "top",
         "characterSize": 14,
         "color": "238;255;204"
       }
@@ -2292,6 +2294,7 @@
         "text": "Round:",
         "font": "",
         "textAlignment": "left",
+        "verticalTextAlignment": "top",
         "characterSize": 14,
         "color": "238;255;204"
       }
@@ -2344,6 +2347,7 @@
         "text": "1",
         "font": "",
         "textAlignment": "right",
+        "verticalTextAlignment": "top",
         "characterSize": 14,
         "color": "238;255;204"
       }
@@ -2392,6 +2396,7 @@
         "text": "START",
         "font": "",
         "textAlignment": "left",
+        "verticalTextAlignment": "top",
         "characterSize": 32,
         "color": "238;255;204"
       }
@@ -5507,7 +5512,6 @@
       "colorG": 74,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Fullscreen",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

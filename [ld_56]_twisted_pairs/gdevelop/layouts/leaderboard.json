@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 2.4124092455436865,
+    "zoomFactor": 1.789878148144862,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -28,6 +28,11 @@
       "name": "playerName",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "fullscreenPrevState",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -40,10 +45,10 @@
       "layer": "",
       "name": "NameInput",
       "persistentUuid": "69f612d5-9cef-4d82-933a-0202432fcd54",
-      "width": 168,
-      "x": 117,
+      "width": 192,
+      "x": 105,
       "y": 108,
-      "zOrder": 1,
+      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -58,7 +63,7 @@
       "name": "Submit",
       "persistentUuid": "cee7c021-a75f-4f61-8537-8beb83e5a06f",
       "width": 24,
-      "x": 291,
+      "x": 303,
       "y": 108,
       "zOrder": 2,
       "numberProperties": [],
@@ -75,19 +80,19 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 0,
           "leftEdgeAnchor": 4,
+          "name": "Anchor",
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 0,
           "topEdgeAnchor": 0,
+          "type": "AnchorBehavior::AnchorBehavior",
           "useLegacyBottomAndRightAnchors": false
         }
       ],
       "content": {
         "initialValue": "",
-        "placeholder": "Let me know your name...",
+        "placeholder": "Your name (no spaces)",
         "fontResourceName": "",
         "fontSize": 14,
         "inputType": "text",
@@ -239,32 +244,67 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": true,
-            "value": "TextInput::TextInputObject::Focused"
-          },
-          "parameters": [
-            "NameInput"
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "TextInput::TextInputObject::Focused"
+              },
+              "parameters": [
+                "NameInput"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::Focus"
+              },
+              "parameters": [
+                "NameInput"
+              ]
+            }
           ]
-        }
-      ],
-      "actions": [
+        },
         {
-          "type": {
-            "value": "TextInput::TextInputObject::Focus"
-          },
-          "parameters": [
-            "NameInput"
-          ]
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "name": "Exit from a fullscreen because both TextInput an Leaderboard are broken in fullscreen for some reason",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "if (document.fullscreenElement) {",
+                    "    document.exitFullscreen();",
+                    "    runtimeScene.getVariables().get(\"fullscreenPrevState\").setBoolean(true);",
+                    "} else {",
+                    "    runtimeScene.getVariables().get(\"fullscreenPrevState\").setBoolean(false);",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ]
     },
@@ -341,13 +381,47 @@
             "\"5cd35c9a-d5e8-40f5-96b8-b41de8be3de3\"",
             "yes"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
           "type": {
-            "value": "PopScene"
+            "value": "Leaderboards::HasPlayerJustClosedLeaderboardView"
           },
-          "parameters": [
-            ""
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// Restore fullscreen",
+            "const canvas = document.getElementsByTagName(\"canvas\")[0];",
+            "const fullscreenPrevState = runtimeScene.getVariables().get(\"fullscreenPrevState\").getAsBoolean();",
+            "if (fullscreenPrevState == true) {",
+            "    canvas.requestFullscreen();",
+            "};"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PopScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
           ]
         }
       ]
@@ -381,39 +455,6 @@
         }
       ],
       "effects": []
-    },
-    {
-      "ambientLightColorB": 200,
-      "ambientLightColorG": 200,
-      "ambientLightColorR": 200,
-      "camera3DFarPlaneDistance": 10000,
-      "camera3DFieldOfView": 45,
-      "camera3DNearPlaneDistance": 3,
-      "cameraType": "",
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "isLocked": false,
-      "name": "Layer",
-      "renderingType": "",
-      "visibility": true,
-      "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
     }
   ],
   "behaviorsSharedData": [
