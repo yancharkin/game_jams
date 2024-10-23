@@ -714,6 +714,15 @@
         "name": "assets/images/gdgames_thumbnail.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach1+.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach1+.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

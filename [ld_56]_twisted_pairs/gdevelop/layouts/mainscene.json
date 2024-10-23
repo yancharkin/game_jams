@@ -164,9 +164,9 @@
     },
     {
       "folded": true,
-      "name": "cockroachAnimSpeed",
+      "name": "cockroachAnimSpeedScale",
       "type": "number",
-      "value": 0.25
+      "value": 1
     },
     {
       "folded": true,
@@ -2414,6 +2414,12 @@
           "name": "destY",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "isExplosive",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -2721,6 +2727,194 @@
                       {
                         "x": 11,
                         "y": 54.5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.25,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/cockroach0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.5,
+                        "y": 18
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 12.5
+                      },
+                      {
+                        "x": 30.5,
+                        "y": 11
+                      },
+                      {
+                        "x": 40.5,
+                        "y": 17.5
+                      },
+                      {
+                        "x": 30,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 23
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/cockroach1+.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.5,
+                        "y": 18
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 12.5
+                      },
+                      {
+                        "x": 30.5,
+                        "y": 11
+                      },
+                      {
+                        "x": 40.5,
+                        "y": 17.5
+                      },
+                      {
+                        "x": 30,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 23
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/cockroach2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.5,
+                        "y": 18
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 12.5
+                      },
+                      {
+                        "x": 30.5,
+                        "y": 11
+                      },
+                      {
+                        "x": 40.5,
+                        "y": 17.5
+                      },
+                      {
+                        "x": 30,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 23
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/cockroach3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8.5,
+                        "y": 18
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 12.5
+                      },
+                      {
+                        "x": 30.5,
+                        "y": 11
+                      },
+                      {
+                        "x": 40.5,
+                        "y": 17.5
+                      },
+                      {
+                        "x": 30,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 14.5,
+                        "y": 23
                       }
                     ]
                   ]
@@ -4294,7 +4488,7 @@
                   "parameters": [
                     "roundN",
                     ">",
-                    "0"
+                    "1"
                   ]
                 }
               ],
@@ -4705,7 +4899,7 @@
                     "cockroach",
                     "Animation",
                     "=",
-                    "0.25"
+                    "1"
                   ]
                 },
                 {
@@ -4713,9 +4907,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "cockroachAnimSpeed",
+                    "cockroachAnimSpeedScale",
                     "=",
-                    "0.25"
+                    "1"
                   ]
                 }
               ]
@@ -5821,7 +6015,7 @@
                 "cockroach",
                 "Animation",
                 "=",
-                "cockroachAnimSpeed"
+                "cockroachAnimSpeedScale"
               ]
             },
             {
@@ -5855,6 +6049,47 @@
               "parameters": [
                 "cockroach",
                 "\"cockroachTimer\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "roundN",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "cockroach",
+                    "isExplosive",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "cockroach",
+                    "Animation",
+                    "=",
+                    "2"
+                  ]
+                }
               ]
             }
           ]
@@ -5924,7 +6159,7 @@
                 "cockroach",
                 "Animation",
                 "=",
-                "cockroachAnimSpeed"
+                "cockroachAnimSpeedScale"
               ]
             },
             {
@@ -6195,9 +6430,9 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "cockroachAnimSpeed",
+                "cockroachAnimSpeedScale",
                 "*",
-                "1.5"
+                "1.25"
               ]
             },
             {
