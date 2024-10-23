@@ -96,13 +96,13 @@
       "folded": true,
       "name": "roundTimeDefault",
       "type": "number",
-      "value": 60
+      "value": 66
     },
     {
       "folded": true,
       "name": "roundTime",
       "type": "number",
-      "value": 60
+      "value": 66
     },
     {
       "folded": true,
@@ -209,6 +209,12 @@
       "name": "isStandaloneAndroid",
       "type": "boolean",
       "value": false
+    },
+    {
+      "folded": true,
+      "name": "makeExplosive",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -2414,12 +2420,6 @@
           "name": "destY",
           "type": "number",
           "value": 0
-        },
-        {
-          "folded": true,
-          "name": "isExplosive",
-          "type": "boolean",
-          "value": false
         }
       ],
       "effects": [],
@@ -6063,31 +6063,58 @@
                   "parameters": [
                     "roundN",
                     ">",
-                    "0"
+                    "3"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetBooleanObjectVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "cockroach",
-                    "isExplosive",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
-                  },
-                  "parameters": [
-                    "cockroach",
-                    "Animation",
+                    "makeExplosive",
                     "=",
-                    "2"
+                    "RandomInRange(0, 2)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "makeExplosive",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "Animation",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "\"explosionTimer\""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -6213,21 +6240,48 @@
             },
             {
               "type": {
-                "value": "CollisionPoint"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "cockroach",
-                "CursorX()",
-                "CursorY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "CollisionPoint"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "CursorX()",
+                        "CursorY()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "cockroach",
+                    "\"explosionTimer\"",
+                    ">=",
+                    "RandomInRange(7, 21)"
+                  ]
+                }
               ]
             }
           ],
