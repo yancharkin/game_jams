@@ -164,6 +164,12 @@
     },
     {
       "folded": true,
+      "name": "cockroachAnimSpeed",
+      "type": "number",
+      "value": 0.25
+    },
+    {
+      "folded": true,
       "name": "startSound",
       "type": "number",
       "value": 0
@@ -3972,6 +3978,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Cards Interaction",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4196,7 +4203,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Start/Restart Game/Round",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4689,6 +4695,27 @@
                     "0",
                     "=",
                     "0.4"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                  },
+                  "parameters": [
+                    "cockroach",
+                    "Animation",
+                    "=",
+                    "0.25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "cockroachAnimSpeed",
+                    "=",
+                    "0.25"
                   ]
                 }
               ]
@@ -5674,7 +5701,6 @@
       "colorG": 0,
       "colorR": 0,
       "creationTime": 0,
-      "folded": true,
       "name": "Cockroach",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5791,6 +5817,17 @@
             },
             {
               "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+              },
+              "parameters": [
+                "cockroach",
+                "Animation",
+                "=",
+                "cockroachAnimSpeed"
+              ]
+            },
+            {
+              "type": {
                 "value": "AddForceVersPos"
               },
               "parameters": [
@@ -5879,6 +5916,17 @@
                 "destY",
                 "=",
                 "Random(SceneWindowHeight())"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+              },
+              "parameters": [
+                "cockroach",
+                "Animation",
+                "=",
+                "cockroachAnimSpeed"
               ]
             },
             {
@@ -6032,7 +6080,6 @@
       "colorG": 16,
       "colorR": 189,
       "creationTime": 0,
-      "folded": true,
       "name": "Win-Lose Conditions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6147,11 +6194,10 @@
             },
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "cockroach",
-                "Animation",
+                "cockroachAnimSpeed",
                 "*",
                 "1.5"
               ]
