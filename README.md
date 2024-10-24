@@ -62,7 +62,7 @@ Try if you dare, but be prepared to face the consequences!*
 *Match Pairs game but with a twist!*
 
 - Game Jam: [Ludum Dare 56](https://ldjam.com/events/ludum-dare/56/twisted-pairs)
-- Engine: [GDevelop (5.4.213)](https://gdevelop.io/)
+- Engine: [GDevelop (5.4.217)](https://gdevelop.io/)
 - Itch Page: https://yancharkin.itch.io/twisted-pairs
 
 <p align="center">
