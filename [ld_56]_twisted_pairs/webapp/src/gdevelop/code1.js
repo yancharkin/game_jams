@@ -8,7 +8,7 @@ gdjs.LeaderboardCode.GDSubmitObjects2= [];
 gdjs.LeaderboardCode.GDSubmitObjects3= [];
 
 
-gdjs.LeaderboardCode.userFunc0x8bbbe0 = function GDJSInlineCode(runtimeScene) {
+gdjs.LeaderboardCode.userFunc0x7d67c0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 if (document.fullscreenElement) {
     document.exitFullscreen();
@@ -22,7 +22,7 @@ gdjs.LeaderboardCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.LeaderboardCode.userFunc0x8bbbe0(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x7d67c0(runtimeScene);
 
 }
 
@@ -34,7 +34,7 @@ gdjs.LeaderboardCode.userFunc0x8bbbe0(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10025116);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10244388);
 }
 if (isConditionTrue_0) {
 
@@ -96,7 +96,7 @@ gdjs.LeaderboardCode.eventsList1(runtimeScene);
 
 
 };gdjs.LeaderboardCode.mapOfGDgdjs_9546LeaderboardCode_9546GDSubmitObjects1Objects = Hashtable.newFrom({"Submit": gdjs.LeaderboardCode.GDSubmitObjects1});
-gdjs.LeaderboardCode.asyncCallback10027484 = function (runtimeScene, asyncObjectsList) {
+gdjs.LeaderboardCode.asyncCallback10246756 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LeaderboardCode.localVariables);
 {gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", true);
 }gdjs.LeaderboardCode.localVariables.length = 0;
@@ -111,14 +111,14 @@ gdjs.LeaderboardCode.eventsList3 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LeaderboardCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (( gdjs.LeaderboardCode.GDNameInputObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDNameInputObjects1[0].getText())), (runtimeScene) => (gdjs.LeaderboardCode.asyncCallback10027484(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (( gdjs.LeaderboardCode.GDNameInputObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDNameInputObjects1[0].getText())), (runtimeScene) => (gdjs.LeaderboardCode.asyncCallback10246756(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.LeaderboardCode.userFunc0x8aae18 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LeaderboardCode.userFunc0x98bc50 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // Restore fullscreen
 const canvas = document.getElementsByTagName("canvas")[0];
@@ -132,7 +132,7 @@ gdjs.LeaderboardCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.LeaderboardCode.userFunc0x8aae18(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x98bc50(runtimeScene);
 
 }
 
@@ -167,6 +167,31 @@ gdjs.LeaderboardCode.eventsList2(runtimeScene);} //End of subevents
 
 {
 
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isMobile();
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(8343204);
+}
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("NameInput"), gdjs.LeaderboardCode.GDNameInputObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Submit"), gdjs.LeaderboardCode.GDSubmitObjects1);
+{for(var i = 0, len = gdjs.LeaderboardCode.GDNameInputObjects1.length ;i < len;++i) {
+    gdjs.LeaderboardCode.GDNameInputObjects1[i].setY(48);
+}
+}{for(var i = 0, len = gdjs.LeaderboardCode.GDSubmitObjects1.length ;i < len;++i) {
+    gdjs.LeaderboardCode.GDSubmitObjects1[i].setY(48);
+}
+}}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("NameInput"), gdjs.LeaderboardCode.GDNameInputObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Submit"), gdjs.LeaderboardCode.GDSubmitObjects1);
 
@@ -188,7 +213,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10025716);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10244988);
 }
 }
 }

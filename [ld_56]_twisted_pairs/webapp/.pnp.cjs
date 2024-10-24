@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["cordova", "npm:12.0.0"],\
           ["cordova-android", "npm:13.0.0"],\
-          ["electron", "npm:33.0.1"],\
+          ["electron", "npm:33.0.2"],\
           ["electron-builder", "npm:25.1.8"]\
         ],\
         "linkType": "SOFT"\
@@ -2464,10 +2464,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron", [\
-      ["npm:33.0.1", {\
-        "packageLocation": "./.yarn/unplugged/electron-npm-33.0.1-da971844f1/node_modules/electron/",\
+      ["npm:33.0.2", {\
+        "packageLocation": "./.yarn/unplugged/electron-npm-33.0.2-bf2a5f9ff0/node_modules/electron/",\
         "packageDependencies": [\
-          ["electron", "npm:33.0.1"],\
+          ["electron", "npm:33.0.2"],\
           ["@electron/get", "npm:2.0.3"],\
           ["@types/node", "npm:20.16.13"],\
           ["extract-zip", "npm:2.0.1"]\
@@ -6545,7 +6545,7 @@ const RAW_RUNTIME_STATE =
           ["twisted-pairs", "workspace:."],\
           ["cordova", "npm:12.0.0"],\
           ["cordova-android", "npm:13.0.0"],\
-          ["electron", "npm:33.0.1"],\
+          ["electron", "npm:33.0.2"],\
           ["electron-builder", "npm:25.1.8"]\
         ],\
         "linkType": "SOFT"\
