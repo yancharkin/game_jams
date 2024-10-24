@@ -47,7 +47,7 @@
       "persistentUuid": "69f612d5-9cef-4d82-933a-0202432fcd54",
       "width": 192,
       "x": 105,
-      "y": 108,
+      "y": 48,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -64,7 +64,7 @@
       "persistentUuid": "cee7c021-a75f-4f61-8537-8beb83e5a06f",
       "width": 24,
       "x": 303,
-      "y": 108,
+      "y": 48,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -202,7 +202,17 @@
           ]
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangeColor"
+          },
+          "parameters": [
+            "cockroach",
+            "\"196;43;43\""
+          ]
+        }
+      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -305,45 +315,6 @@
             }
           ],
           "parameters": []
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SystemInfo::IsMobile"
-          },
-          "parameters": []
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "MettreY"
-          },
-          "parameters": [
-            "NameInput",
-            "=",
-            "48"
-          ]
-        },
-        {
-          "type": {
-            "value": "MettreY"
-          },
-          "parameters": [
-            "Submit",
-            "=",
-            "48"
-          ]
         }
       ]
     },
