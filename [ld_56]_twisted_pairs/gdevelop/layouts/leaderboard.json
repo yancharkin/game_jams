@@ -399,7 +399,27 @@
       "conditions": [
         {
           "type": {
-            "value": "Leaderboards::HasPlayerJustClosedLeaderboardView"
+            "value": "BuiltinCommonInstructions::Or"
+          },
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "Leaderboards::HasPlayerJustClosedLeaderboardView"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "Leaderboards::IsLeaderboardViewErrored"
+              },
+              "parameters": []
+            }
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
         }
