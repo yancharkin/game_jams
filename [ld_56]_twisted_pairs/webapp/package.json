@@ -1,7 +1,7 @@
 {
     "name": "twisted-pairs",
     "displayName": "Twisted Pairs",
-    "version": "0.9.9",
+    "version": "1.0.0",
     "description": "Match Pairs game but with a twist!",
     "repository": "https://github.com/yancharkin/game_jams/tree/main/[ld_56]_twisted_pairs",
     "main": "www/index.html",

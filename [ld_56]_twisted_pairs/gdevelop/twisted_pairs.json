@@ -19,7 +19,7 @@
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "useExternalSourceFiles": false,
-    "version": "0.9.9",
+    "version": "1.0.0",
     "name": "Twisted Pairs",
     "description": "Match Pairs game but with a twist!",
     "author": "yancharkin",

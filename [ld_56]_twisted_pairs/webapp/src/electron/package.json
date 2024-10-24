@@ -1,7 +1,7 @@
 {
     "name": "twisted-pairs",
     "description": "Match Pairs game but with a twist!",
-    "version": "0.9.9",
+    "version": "1.0.0",
     "main": "index.js",
     "author": "Ivan Yancharkin <yancharkin@gmail.com>"
 }

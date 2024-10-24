@@ -1,4 +1,4 @@
-const cacheName = 'TWISTED-v1';
+const cacheName = 'TWISTED-v1.0';
 
 self.addEventListener("install", (event) => {
     console.log("[Service Worker] Install");
