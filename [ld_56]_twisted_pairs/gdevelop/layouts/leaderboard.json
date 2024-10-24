@@ -202,17 +202,7 @@
           ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangeColor"
-          },
-          "parameters": [
-            "cockroach",
-            "\"196;43;43\""
-          ]
-        }
-      ],
+      "actions": [],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
