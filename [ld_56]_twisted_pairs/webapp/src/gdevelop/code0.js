@@ -99,7 +99,7 @@ gdjs.MainSceneCode.GDFullscreenObjects4= [];
 gdjs.MainSceneCode.GDFullscreenObjects5= [];
 
 
-gdjs.MainSceneCode.userFunc0x848890 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x848d08 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 var isAndroid = /(android)/i.test(navigator.userAgent);
 var isStandalone = !window.matchMedia("(display-mode: browser)").matches;
@@ -119,7 +119,7 @@ gdjs.MainSceneCode.eventsList0 = function(runtimeScene) {
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDFullscreenObjects1);
-gdjs.MainSceneCode.userFunc0x848890(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x848d08(runtimeScene, objects);
 
 }
 
@@ -170,7 +170,7 @@ gdjs.MainSceneCode.eventsList0(runtimeScene);
 
 
 };gdjs.MainSceneCode.mapOfGDgdjs_9546MainSceneCode_9546GDcardObjects2Objects = Hashtable.newFrom({"card": gdjs.MainSceneCode.GDcardObjects2});
-gdjs.MainSceneCode.userFunc0x844d80 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x849338 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 const card = objects[0];
 const cardImageN = card.getVariables().get("imageN").getValue();
@@ -190,7 +190,7 @@ gdjs.copyArray(gdjs.MainSceneCode.GDcardObjects2, gdjs.MainSceneCode.GDcardObjec
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDcardObjects3);
-gdjs.MainSceneCode.userFunc0x844d80(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x849338(runtimeScene, objects);
 
 }
 
@@ -215,7 +215,7 @@ let isConditionTrue_0 = false;
 }
 
 
-};gdjs.MainSceneCode.userFunc0x845a00 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x845d38 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const answers = runtimeScene.getVariables().get("answers").getAllChildrenArray();
@@ -247,7 +247,7 @@ gdjs.MainSceneCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x845a00(runtimeScene);
+gdjs.MainSceneCode.userFunc0x845d38(runtimeScene);
 
 }
 
@@ -419,7 +419,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.MainSceneCode.userFunc0x846000 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x918760 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const widthDiff = (432 - runtimeScene.getViewportWidth())/2;
@@ -461,12 +461,12 @@ gdjs.MainSceneCode.eventsList9 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x846000(runtimeScene);
+gdjs.MainSceneCode.userFunc0x918760(runtimeScene);
 
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8461c0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x918920 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 var cardsUsed = [];
@@ -499,7 +499,7 @@ gdjs.MainSceneCode.eventsList10 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8461c0(runtimeScene);
+gdjs.MainSceneCode.userFunc0x918920(runtimeScene);
 
 }
 
@@ -558,7 +558,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(8), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9902804);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9900020);
 }
 }
 if (isConditionTrue_0) {
@@ -1065,7 +1065,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9921108);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9918324);
 }
 }
 }
@@ -1083,7 +1083,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.MainSceneCode.mapOfGDgdjs_9546MainSceneCode_9546GDFullscreenObjects1Objects = Hashtable.newFrom({"Fullscreen": gdjs.MainSceneCode.GDFullscreenObjects1});
-gdjs.MainSceneCode.userFunc0x962ac0 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x8c3940 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 const fullscreenButton = objects[0];
 const canvas = document.getElementsByTagName("canvas")[0];
@@ -1105,7 +1105,7 @@ gdjs.MainSceneCode.eventsList17 = function(runtimeScene) {
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDFullscreenObjects1);
-gdjs.MainSceneCode.userFunc0x962ac0(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x8c3940(runtimeScene, objects);
 
 }
 
@@ -1127,7 +1127,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9922948);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9920164);
 }
 }
 }
@@ -1159,7 +1159,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9925100);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9922316);
 }
 }
 }
@@ -1394,7 +1394,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9932340);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9929556);
 }
 }
 if (isConditionTrue_0) {
@@ -1685,7 +1685,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9940780);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9937996);
 }
 }
 }
@@ -1723,7 +1723,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9949932);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9947148);
 }
 }
 }
@@ -1754,7 +1754,7 @@ gdjs.MainSceneCode.eventsList27(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.MainSceneCode.userFunc0x964950 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x8bfb48 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 function randi(min, max) {
     const minCeiled = Math.ceil(min);
@@ -1849,7 +1849,7 @@ gdjs.MainSceneCode.eventsList29 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x964950(runtimeScene);
+gdjs.MainSceneCode.userFunc0x8bfb48(runtimeScene);
 
 }
 
@@ -1897,7 +1897,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "shiftsTimer") >= runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() / 3;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9953212);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9950428);
 }
 }
 if (isConditionTrue_0) {
@@ -1946,7 +1946,7 @@ for(var i = 0, len = gdjs.MainSceneCode.GDhighlight1Objects1.length ;i < len;++i
 }
 
 
-};gdjs.MainSceneCode.userFunc0x90cd68 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x847890 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const widthDiff = (432 - runtimeScene.getViewportWidth())/2;
@@ -1969,7 +1969,7 @@ gdjs.MainSceneCode.eventsList32 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x90cd68(runtimeScene);
+gdjs.MainSceneCode.userFunc0x847890(runtimeScene);
 
 }
 
@@ -2056,7 +2056,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(18), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9886284);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9883500);
 }
 }
 if (isConditionTrue_0) {

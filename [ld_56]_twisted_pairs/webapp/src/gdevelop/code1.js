@@ -8,7 +8,7 @@ gdjs.LeaderboardCode.GDSubmitObjects2= [];
 gdjs.LeaderboardCode.GDSubmitObjects3= [];
 
 
-gdjs.LeaderboardCode.userFunc0x7efbb8 = function GDJSInlineCode(runtimeScene) {
+gdjs.LeaderboardCode.userFunc0x845ae0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 if (document.fullscreenElement) {
     document.exitFullscreen();
@@ -22,7 +22,7 @@ gdjs.LeaderboardCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.LeaderboardCode.userFunc0x7efbb8(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x845ae0(runtimeScene);
 
 }
 
@@ -34,7 +34,7 @@ gdjs.LeaderboardCode.userFunc0x7efbb8(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10046300);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9342876);
 }
 if (isConditionTrue_0) {
 
@@ -96,7 +96,7 @@ gdjs.LeaderboardCode.eventsList1(runtimeScene);
 
 
 };gdjs.LeaderboardCode.mapOfGDgdjs_9546LeaderboardCode_9546GDSubmitObjects1Objects = Hashtable.newFrom({"Submit": gdjs.LeaderboardCode.GDSubmitObjects1});
-gdjs.LeaderboardCode.asyncCallback10048508 = function (runtimeScene, asyncObjectsList) {
+gdjs.LeaderboardCode.asyncCallback9773772 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LeaderboardCode.localVariables);
 {gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", true);
 }gdjs.LeaderboardCode.localVariables.length = 0;
@@ -111,14 +111,14 @@ gdjs.LeaderboardCode.eventsList3 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LeaderboardCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (( gdjs.LeaderboardCode.GDNameInputObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDNameInputObjects1[0].getText())), (runtimeScene) => (gdjs.LeaderboardCode.asyncCallback10048508(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "5cd35c9a-d5e8-40f5-96b8-b41de8be3de3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (( gdjs.LeaderboardCode.GDNameInputObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDNameInputObjects1[0].getText())), (runtimeScene) => (gdjs.LeaderboardCode.asyncCallback9773772(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.LeaderboardCode.userFunc0x849538 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LeaderboardCode.userFunc0x918380 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 // Restore fullscreen
 const canvas = document.getElementsByTagName("canvas")[0];
@@ -132,7 +132,7 @@ gdjs.LeaderboardCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.LeaderboardCode.userFunc0x849538(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x918380(runtimeScene);
 
 }
 
@@ -188,7 +188,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10047852);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9333900);
 }
 }
 }
@@ -209,7 +209,28 @@ gdjs.LeaderboardCode.eventsList3(runtimeScene);} //End of subevents
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.leaderboards.hasPlayerJustClosedLeaderboardView();
+{let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
+{
+isConditionTrue_1 = gdjs.evtTools.leaderboards.hasPlayerJustClosedLeaderboardView();
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+isConditionTrue_1 = gdjs.evtTools.leaderboards.isLeaderboardViewErrored();
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+}
+}
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9349804);
+}
+}
 if (isConditionTrue_0) {
 
 { //Subevents
