@@ -1,4 +1,4 @@
-const cacheName = 'TWISTED-v1';
+const cacheName = 'TWISTED-v1.0';
 
 self.addEventListener("install", (event) => {
     console.log("[Service Worker] Install");
@@ -103,8 +103,8 @@ const filesList = [
     "/game_jams/[ld_56]_twisted_pairs/bastille.png",
     "/game_jams/[ld_56]_twisted_pairs/click.wav",
     "/game_jams/[ld_56]_twisted_pairs/cockroach0.png",
+    "/game_jams/[ld_56]_twisted_pairs/cockroach11.png",
     "/game_jams/[ld_56]_twisted_pairs/cockroach1.png",
-    "/game_jams/[ld_56]_twisted_pairs/cockroach1+.png",
     "/game_jams/[ld_56]_twisted_pairs/cockroach2.png",
     "/game_jams/[ld_56]_twisted_pairs/cockroach3.png",
     "/game_jams/[ld_56]_twisted_pairs/code0.js",
@@ -135,7 +135,6 @@ const filesList = [
     "/game_jams/[ld_56]_twisted_pairs/Extensions/Leaderboards/sha256.js",
     "/game_jams/[ld_56]_twisted_pairs/Extensions/PlayerAuthentication/playerauthenticationcomponents.js",
     "/game_jams/[ld_56]_twisted_pairs/Extensions/PlayerAuthentication/playerauthenticationtools.js",
-    "/game_jams/[ld_56]_twisted_pairs/Extensions/SystemInfo/systeminfotools.js",
     "/game_jams/[ld_56]_twisted_pairs/Extensions/TextInput/textinputruntimeobject.js",
     "/game_jams/[ld_56]_twisted_pairs/Extensions/TextInput/textinputruntimeobject-pixi-renderer.js",
     "/game_jams/[ld_56]_twisted_pairs/Extensions/TextObject/textruntimeobject.js",
@@ -159,7 +158,6 @@ const filesList = [
     "/game_jams/[ld_56]_twisted_pairs/icon-512.png",
     "/game_jams/[ld_56]_twisted_pairs/icon.png",
     "/game_jams/[ld_56]_twisted_pairs/index.html",
-    "/game_jams/[ld_56]_twisted_pairs/index.js",
     "/game_jams/[ld_56]_twisted_pairs/inputmanager.js",
     "/game_jams/[ld_56]_twisted_pairs/jsonmanager.js",
     "/game_jams/[ld_56]_twisted_pairs/kill.wav",

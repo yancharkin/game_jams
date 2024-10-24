@@ -99,7 +99,7 @@ gdjs.MainSceneCode.GDFullscreenObjects4= [];
 gdjs.MainSceneCode.GDFullscreenObjects5= [];
 
 
-gdjs.MainSceneCode.userFunc0x8a2b00 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x848890 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 var isAndroid = /(android)/i.test(navigator.userAgent);
 var isStandalone = !window.matchMedia("(display-mode: browser)").matches;
@@ -119,7 +119,7 @@ gdjs.MainSceneCode.eventsList0 = function(runtimeScene) {
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDFullscreenObjects1);
-gdjs.MainSceneCode.userFunc0x8a2b00(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x848890(runtimeScene, objects);
 
 }
 
@@ -170,7 +170,7 @@ gdjs.MainSceneCode.eventsList0(runtimeScene);
 
 
 };gdjs.MainSceneCode.mapOfGDgdjs_9546MainSceneCode_9546GDcardObjects2Objects = Hashtable.newFrom({"card": gdjs.MainSceneCode.GDcardObjects2});
-gdjs.MainSceneCode.userFunc0x8a3990 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x844d80 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 const card = objects[0];
 const cardImageN = card.getVariables().get("imageN").getValue();
@@ -190,7 +190,7 @@ gdjs.copyArray(gdjs.MainSceneCode.GDcardObjects2, gdjs.MainSceneCode.GDcardObjec
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDcardObjects3);
-gdjs.MainSceneCode.userFunc0x8a3990(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x844d80(runtimeScene, objects);
 
 }
 
@@ -215,7 +215,7 @@ let isConditionTrue_0 = false;
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8a3e18 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x845a00 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const answers = runtimeScene.getVariables().get("answers").getAllChildrenArray();
@@ -247,7 +247,7 @@ gdjs.MainSceneCode.eventsList4 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8a3e18(runtimeScene);
+gdjs.MainSceneCode.userFunc0x845a00(runtimeScene);
 
 }
 
@@ -419,7 +419,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8a5a30 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x846000 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const widthDiff = (432 - runtimeScene.getViewportWidth())/2;
@@ -461,12 +461,12 @@ gdjs.MainSceneCode.eventsList9 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8a5a30(runtimeScene);
+gdjs.MainSceneCode.userFunc0x846000(runtimeScene);
 
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8a5bc8 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x8461c0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 var cardsUsed = [];
@@ -499,7 +499,7 @@ gdjs.MainSceneCode.eventsList10 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8a5bc8(runtimeScene);
+gdjs.MainSceneCode.userFunc0x8461c0(runtimeScene);
 
 }
 
@@ -558,7 +558,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(8), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9885364);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9902804);
 }
 }
 if (isConditionTrue_0) {
@@ -1065,7 +1065,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9903668);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9921108);
 }
 }
 }
@@ -1083,7 +1083,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.MainSceneCode.mapOfGDgdjs_9546MainSceneCode_9546GDFullscreenObjects1Objects = Hashtable.newFrom({"Fullscreen": gdjs.MainSceneCode.GDFullscreenObjects1});
-gdjs.MainSceneCode.userFunc0x8a9c20 = function GDJSInlineCode(runtimeScene, objects) {
+gdjs.MainSceneCode.userFunc0x962ac0 = function GDJSInlineCode(runtimeScene, objects) {
 "use strict";
 const fullscreenButton = objects[0];
 const canvas = document.getElementsByTagName("canvas")[0];
@@ -1105,7 +1105,7 @@ gdjs.MainSceneCode.eventsList17 = function(runtimeScene) {
 
 var objects = [];
 objects.push.apply(objects,gdjs.MainSceneCode.GDFullscreenObjects1);
-gdjs.MainSceneCode.userFunc0x8a9c20(runtimeScene, objects);
+gdjs.MainSceneCode.userFunc0x962ac0(runtimeScene, objects);
 
 }
 
@@ -1127,7 +1127,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9905508);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9922948);
 }
 }
 }
@@ -1159,7 +1159,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9907660);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9925100);
 }
 }
 }
@@ -1339,11 +1339,24 @@ gdjs.MainSceneCode.eventsList24 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) >= 6;
+if (isConditionTrue_0) {
+{runtimeScene.getScene().getVariables().getFromIndex(19).setNumber(gdjs.randomInRange(0, 1));
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(19)) == 1;
 if (isConditionTrue_0) {
 /* Reuse gdjs.MainSceneCode.GDcockroachObjects2 */
 {for(var i = 0, len = gdjs.MainSceneCode.GDcockroachObjects2.length ;i < len;++i) {
-    gdjs.MainSceneCode.GDcockroachObjects2[i].getBehavior("Animation").setAnimationIndex(2);
+    gdjs.MainSceneCode.GDcockroachObjects2[i].getBehavior("Animation").setAnimationName("Moving_Explosive");
 }
 }{for(var i = 0, len = gdjs.MainSceneCode.GDcockroachObjects2.length ;i < len;++i) {
     gdjs.MainSceneCode.GDcockroachObjects2[i].resetTimer("explosionTimer");
@@ -1381,7 +1394,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9914900);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9932340);
 }
 }
 if (isConditionTrue_0) {
@@ -1537,14 +1550,76 @@ if(isConditionTrue_1) {
 {
 gdjs.copyArray(gdjs.MainSceneCode.GDcockroachObjects1, gdjs.MainSceneCode.GDcockroachObjects2);
 
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) < 7;
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
 for (var i = 0, k = 0, l = gdjs.MainSceneCode.GDcockroachObjects2.length;i<l;++i) {
-    if ( gdjs.MainSceneCode.GDcockroachObjects2[i].getTimerElapsedTimeInSecondsOrNaN("explosionTimer") >= gdjs.randomInRange(7, 21) ) {
-        isConditionTrue_1 = true;
+    if ( gdjs.MainSceneCode.GDcockroachObjects2[i].getTimerElapsedTimeInSecondsOrNaN("explosionTimer") >= gdjs.randomInRange(7, 16) ) {
+        isConditionTrue_2 = true;
         gdjs.MainSceneCode.GDcockroachObjects2[k] = gdjs.MainSceneCode.GDcockroachObjects2[i];
         ++k;
     }
 }
 gdjs.MainSceneCode.GDcockroachObjects2.length = k;
+}
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.MainSceneCode.GDcockroachObjects2.length; j < jLen ; ++j) {
+        if ( gdjs.MainSceneCode.GDcockroachObjects1_1final.indexOf(gdjs.MainSceneCode.GDcockroachObjects2[j]) === -1 )
+            gdjs.MainSceneCode.GDcockroachObjects1_1final.push(gdjs.MainSceneCode.GDcockroachObjects2[j]);
+    }
+}
+}
+{
+gdjs.copyArray(gdjs.MainSceneCode.GDcockroachObjects1, gdjs.MainSceneCode.GDcockroachObjects2);
+
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) >= 6;
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+for (var i = 0, k = 0, l = gdjs.MainSceneCode.GDcockroachObjects2.length;i<l;++i) {
+    if ( gdjs.MainSceneCode.GDcockroachObjects2[i].getTimerElapsedTimeInSecondsOrNaN("explosionTimer") >= gdjs.randomInRange(3, 7) ) {
+        isConditionTrue_2 = true;
+        gdjs.MainSceneCode.GDcockroachObjects2[k] = gdjs.MainSceneCode.GDcockroachObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainSceneCode.GDcockroachObjects2.length = k;
+}
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.MainSceneCode.GDcockroachObjects2.length; j < jLen ; ++j) {
+        if ( gdjs.MainSceneCode.GDcockroachObjects1_1final.indexOf(gdjs.MainSceneCode.GDcockroachObjects2[j]) === -1 )
+            gdjs.MainSceneCode.GDcockroachObjects1_1final.push(gdjs.MainSceneCode.GDcockroachObjects2[j]);
+    }
+}
+}
+{
+gdjs.copyArray(gdjs.MainSceneCode.GDcockroachObjects1, gdjs.MainSceneCode.GDcockroachObjects2);
+
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) >= 8;
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+for (var i = 0, k = 0, l = gdjs.MainSceneCode.GDcockroachObjects2.length;i<l;++i) {
+    if ( gdjs.MainSceneCode.GDcockroachObjects2[i].getTimerElapsedTimeInSecondsOrNaN("explosionTimer") >= gdjs.randomInRange(1, 3) ) {
+        isConditionTrue_2 = true;
+        gdjs.MainSceneCode.GDcockroachObjects2[k] = gdjs.MainSceneCode.GDcockroachObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainSceneCode.GDcockroachObjects2.length = k;
+}
+isConditionTrue_1 = isConditionTrue_2;
+}
 if(isConditionTrue_1) {
     isConditionTrue_0 = true;
     for (let j = 0, jLen = gdjs.MainSceneCode.GDcockroachObjects2.length; j < jLen ; ++j) {
@@ -1610,7 +1685,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9926388);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9940780);
 }
 }
 }
@@ -1626,7 +1701,7 @@ gdjs.copyArray(runtimeScene.getObjects("card"), gdjs.MainSceneCode.GDcardObjects
     gdjs.MainSceneCode.GDMessageObjects2[i].getBehavior("Text").setText("YOU WIN!");
 }
 }{runtimeScene.getScene().getVariables().getFromIndex(7).setBoolean(false);
-}{runtimeScene.getScene().getVariables().getFromIndex(2).sub(5);
+}{runtimeScene.getScene().getVariables().getFromIndex(2).sub(3);
 }{runtimeScene.getScene().getVariables().getFromIndex(0).add(1);
 }{runtimeScene.getScene().getVariables().getFromIndex(10).mul(1.5);
 }{runtimeScene.getScene().getVariables().getFromIndex(11).mul(1.25);
@@ -1648,7 +1723,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(7), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9929452);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9949932);
 }
 }
 }
@@ -1679,7 +1754,7 @@ gdjs.MainSceneCode.eventsList27(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8afd28 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x964950 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 function randi(min, max) {
     const minCeiled = Math.ceil(min);
@@ -1774,7 +1849,7 @@ gdjs.MainSceneCode.eventsList29 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8afd28(runtimeScene);
+gdjs.MainSceneCode.userFunc0x964950(runtimeScene);
 
 }
 
@@ -1822,7 +1897,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "shiftsTimer") >= runtimeScene.getScene().getVariables().getFromIndex(2).getAsNumber() / 3;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9932732);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9953212);
 }
 }
 if (isConditionTrue_0) {
@@ -1871,7 +1946,7 @@ for(var i = 0, len = gdjs.MainSceneCode.GDhighlight1Objects1.length ;i < len;++i
 }
 
 
-};gdjs.MainSceneCode.userFunc0x8b06c0 = function GDJSInlineCode(runtimeScene) {
+};gdjs.MainSceneCode.userFunc0x90cd68 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 const cards = runtimeScene.getObjects("card");
 const widthDiff = (432 - runtimeScene.getViewportWidth())/2;
@@ -1894,7 +1969,7 @@ gdjs.MainSceneCode.eventsList32 = function(runtimeScene) {
 {
 
 
-gdjs.MainSceneCode.userFunc0x8b06c0(runtimeScene);
+gdjs.MainSceneCode.userFunc0x90cd68(runtimeScene);
 
 }
 
@@ -1981,7 +2056,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(18), true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9868844);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9886284);
 }
 }
 if (isConditionTrue_0) {
