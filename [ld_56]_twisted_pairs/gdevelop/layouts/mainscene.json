@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.7898781481448622,
+    "zoomFactor": 1.9126239120923036,
     "windowMask": false
   },
   "objectsGroups": [
@@ -442,13 +442,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 48,
       "keepRatio": true,
       "layer": "",
       "name": "card",
       "persistentUuid": "2bf210e6-90a6-4d07-920c-82a61955ab00",
-      "width": 0,
+      "width": 48,
       "x": 160,
       "y": 96,
       "zOrder": 2,
@@ -2620,128 +2621,7 @@
           ]
         },
         {
-          "name": "Dead",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/images/cockroach/dead0.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 11.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 50.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 51.5,
-                        "y": 54
-                      },
-                      {
-                        "x": 11,
-                        "y": 54.5
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/images/cockroach/dead1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 11.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 50.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 51.5,
-                        "y": 54
-                      },
-                      {
-                        "x": 11,
-                        "y": 54.5
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/images/cockroach/dead2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 11.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 50.5,
-                        "y": 14
-                      },
-                      {
-                        "x": 51.5,
-                        "y": 54
-                      },
-                      {
-                        "x": 11,
-                        "y": 54.5
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "",
+          "name": "Moving_Explosive",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2794,7 +2674,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/images/cockroach/cockroach1+.png",
+                  "image": "assets/images/cockroach/cockroach11.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2920,6 +2800,127 @@
                       {
                         "x": 14.5,
                         "y": 23
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/dead0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 11.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 51.5,
+                        "y": 54
+                      },
+                      {
+                        "x": 11,
+                        "y": 54.5
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/dead1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 11.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 51.5,
+                        "y": 54
+                      },
+                      {
+                        "x": 11,
+                        "y": 54.5
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/images/cockroach/dead2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 11.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 14
+                      },
+                      {
+                        "x": 51.5,
+                        "y": 54
+                      },
+                      {
+                        "x": 11,
+                        "y": 54.5
                       }
                     ]
                   ]
@@ -3819,6 +3820,7 @@
   },
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -4178,6 +4180,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Cards Interaction",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4402,6 +4405,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Start/Restart Game/Round",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4929,6 +4933,7 @@
       "colorG": 2,
       "colorR": 208,
       "creationTime": 0,
+      "folded": true,
       "name": "Apply Settings",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5427,6 +5432,7 @@
       "colorG": 74,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Mute Sound",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5512,6 +5518,7 @@
       "colorG": 74,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Fullscreen",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5897,6 +5904,7 @@
       "colorG": 0,
       "colorR": 0,
       "creationTime": 0,
+      "folded": true,
       "name": "Cockroach",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6092,6 +6100,33 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
+                        "roundN",
+                        ">=",
+                        "6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "makeExplosive",
+                        "=",
+                        "RandomInRange(0, 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
                         "makeExplosive",
                         "=",
                         "1"
@@ -6101,13 +6136,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
                         "cockroach",
                         "Animation",
                         "=",
-                        "2"
+                        "\"Moving_Explosive\""
                       ]
                     },
                     {
@@ -6277,13 +6312,89 @@
                 },
                 {
                   "type": {
-                    "value": "CompareObjectTimer"
+                    "value": "BuiltinCommonInstructions::And"
                   },
-                  "parameters": [
-                    "cockroach",
-                    "\"explosionTimer\"",
-                    ">=",
-                    "RandomInRange(7, 21)"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "roundN",
+                        "<",
+                        "7"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "\"explosionTimer\"",
+                        ">=",
+                        "RandomInRange(7, 16)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "roundN",
+                        ">=",
+                        "6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "\"explosionTimer\"",
+                        ">=",
+                        "RandomInRange(3, 7)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "roundN",
+                        ">=",
+                        "8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "cockroach",
+                        "\"explosionTimer\"",
+                        ">=",
+                        "RandomInRange(1, 3)"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -6460,7 +6571,7 @@
               "parameters": [
                 "roundTime",
                 "-",
-                "5"
+                "3"
               ]
             },
             {

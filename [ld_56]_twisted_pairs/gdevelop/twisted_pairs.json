@@ -25,7 +25,7 @@
     "author": "yancharkin",
     "windowWidth": 432,
     "windowHeight": 240,
-    "latestCompilationDirectory": "/home/user/twisted_pairs_html",
+    "latestCompilationDirectory": "/home/user/twisted_pairs_leaderboard",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -88,7 +88,7 @@
     "categories": [
       "mini-games",
       "puzzle",
-      "horror"
+      "leaderboard"
     ],
     "playableDevices": [
       "keyboard",
@@ -214,15 +214,6 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/images/loading_screen.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/loading_screen.png",
-        "smoothed": false,
         "userAdded": true
       },
       {
@@ -699,19 +690,28 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/images/cockroach/cockroach1+.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/images/cockroach/cockroach1+.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/images/gdgames_thumbnail.png",
         "kind": "image",
         "metadata": "",
         "name": "assets/images/gdgames_thumbnail.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/cockroach/cockroach11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/cockroach/cockroach11.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/images/loading_screen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/images/loading_screen.png",
         "smoothed": false,
         "userAdded": false
       }
